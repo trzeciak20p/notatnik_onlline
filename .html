@@ -9,12 +9,13 @@
     <title>OnPaint</title>
     <link src="style.css" rel="stylesheet">
 </head>
-<body>
 
+<body>
+    <h1>To służy formatowaniu HTML-a bo .php nie pomaga</h1>
     <nav>
         <ul>
-            <a href="index.php"></a><li>Strona Główna</li></a>
-            <a href="notes.php"></a><li>Twoje Notatki</li></a>
+            <a href="index.php"><li>Strona Główna</li></a>
+            <a href="notes.php"><li>Twoje Notatki</li></a>
             <a href="login.php"><li>Logowanie</li></a>
         </ul>
     </nav>
@@ -43,6 +44,20 @@
 
 
     </article>
+
+    <form method="POST" action="index.html">
+
+        <label>
+            <h3>Login</h3>
+            <input type="text" name="nickname">
+        </label>
+        <label>
+            <h3>Hasło</h3>
+            <input type="password" name="password">
+        </label>
+        <input type="submit" name="submit" value="Zaloguj">
+
+    <form>
 
 </body>
 </html>

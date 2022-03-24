@@ -10,16 +10,6 @@
 
 <body>
 
-    <nav>   
-        <ul>
-            <a href="index.php"></a><li>Strona Główna</li></a>
-            <a href="notes.php"></a><li>Twoje Notatki</li></a>
-            <a href="login.php"><li>Logowanie</li></a>
-        </ul>
-    </nav>
-    
-    <main>
-        
     <form method="POST" action="index.html">
 
         <label>
@@ -28,15 +18,18 @@
         </label>
         <label>
             <h3>Hasło</h3>
-            <input type="password" name="password">
+            <input type="text" name="password">
         </label>
-        <input type="submit" name="login" value="Zaloguj">
+        <label>
+            <h3>Podaj hasło ponownie</h3>
+            <input type="text" name="password2">
+        </label>
+
+        <input type="submit" name="register" value="Zaloguj">
 
     <form>
 
-    <a href="register.php">Nie masz konta? Zarejestruj się.</a>
-
-    </main>
-
+    <a href="login.php">Masz już konto? Zaloguj się.</a>
+    
 </body>
 </html>

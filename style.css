@@ -2,3 +2,17 @@ body{
     background-color: rgb(82, 228, 233);
     color: wheat;
 }
+nav{
+
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul a{
+    text-transform: none;
+    color: wheat;
+}   
+a{
+    text-transform: none;
+    color: wheat;
+}

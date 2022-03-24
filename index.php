@@ -9,6 +9,7 @@
     <title>OnPaint</title>
     <link src="style.css" rel="stylesheet">
 </head>
+
 <body>
 
     <nav>
