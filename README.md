@@ -13,7 +13,7 @@
 ### Byłoby super gdyby dodać
     - Follow-owanine autorów (osobne)
     - Możliwość komuś do edycji przyznania
-    - import obrazów z zewnątrz
+    - import obrazów z zewnątrz (guziczek, ctrl+v)
     
 ## PODZIAŁ UŻYTKOWNIKÓW
     - Admin - wszystko se potrafi
@@ -21,8 +21,6 @@
     - Ultra Chad B) - użytkownik co wykupipł subskrybcję ultra premium PRO
     
 ## STRONA TECHNICZNA
-    Zapisujesz canvasa do png i se wczytujesz. Przy warstwach wczytujesz warstwa po warstwie, 
-
-
-# Zadanie na jire aee
-podstawy: robienie tabliców itp.
+    Zapisujesz canvasa do png i se wczytujesz. Przy warstwach wczytujesz warstwa po warstwie.
+    
+    import plików z zewnątrz: funkcja co patrzy czy guzik czy schowek (wtedy oidpowiednio pobiera i przekleja na canvasa)
