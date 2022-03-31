@@ -1,6 +1,6 @@
 # Paint OnLine
 
-## Tu se możesz notatki tworzyć przeglądać i edytować
+## Tu se możesz rysunki tworzyć, przeglądać i edytować
 
 ## ZAŁOŻENIA
     - Logowanie i rejestracja
