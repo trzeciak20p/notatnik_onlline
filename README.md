@@ -13,6 +13,7 @@
 ### Byłoby super gdyby dodać
     - Follow-owanine autorów (osobne)
     - Możliwość komuś do edycji przyznania
+    - import obrazów z zewnątrz
     
 ## PODZIAŁ UŻYTKOWNIKÓW
     - Admin - wszystko se potrafi
