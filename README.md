@@ -14,6 +14,7 @@
     - Follow-owanine autorów (osobne)
     - Możliwość komuś do edycji przyznania
     - import obrazów z zewnątrz (guziczek, ctrl+v)
+    - reverse image search - azaliza piksela po pikselu, wyświetlanie najbardziej podobnych obrazów
     
 ## PODZIAŁ UŻYTKOWNIKÓW
     - Admin - wszystko se potrafi
