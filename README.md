@@ -4,7 +4,7 @@
 
 ## ZAŁOŻENIA
     - Logowanie i rejestracja
-    - Tworzenie i edycja obrazów
+    - Tworzenie i edycja obrazów (kolory hexem wybierasz, może tworzenie kształtów wybranych)
     - Przeglądanie udostępnionych przez innnych obrazów (użytkownik może, ale nie musi udostępnić obrazów dla innych)
     - System lizań
     - Wyszukiwanie obrazów po ich tytule bądź autorze
@@ -21,6 +21,9 @@
     - Ultra Chad B) - użytkownik co wykupipł subskrybcję ultra premium PRO
     
 ## STRONA TECHNICZNA
-    Zapisujesz canvasa do png i se wczytujesz. Przy warstwach wczytujesz warstwa po warstwie.
     
-    import plików z zewnątrz: funkcja co patrzy czy guzik czy schowek (wtedy oidpowiednio pobiera i przekleja na canvasa)
+### Tworzenie rysunku
+    
+    Zapisujesz canvasa do png i se wczytujesz. Przy warstwach wczytujesz warstwa po warstwie.
+    Import plików z zewnątrz: funkcja co patrzy czy guzik czy schowek (wtedy oidpowiednio pobiera i przekleja na canvasa)
+    Zmienna na określanie która warstwa jest aktywna
