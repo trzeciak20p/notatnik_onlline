@@ -21,11 +21,6 @@
         <a href="login.php">Zaloguj się</a>
     </nav>
 
-    <header>
-        <label>
-            Wyszukaj <input type="text">
-        </label>
-    </header>
 
     <article>
         <h2>Obserwowani</h2>

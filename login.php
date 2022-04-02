@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Log in</title>
 </head>
 
 <body>
@@ -21,21 +21,21 @@
     
     <main>
         
-    <form method="POST" action="index.html">
+        <form method="POST" action="index.html">
 
-        <label>
-            <h3>Login</h3>
-            <input type="text" name="nickname">
-        </label>
-        <label>
-            <h3>Hasło</h3>
-            <input type="password" name="password">
-        </label>
-        <input type="submit" name="login" value="Zaloguj">
+            <label>
+                <h3>Login</h3>
+                <input type="text" name="nickname">
+            </label>
+            <label>
+                <h3>Hasło</h3>
+                <input type="password" name="password">
+            </label>
+            <input type="submit" name="login" value="Zaloguj">
 
-    <form>
+        <form>
 
-    <a href="register.php">Nie masz konta? Zarejestruj się.</a>
+        <a href="register.php">Nie masz konta? Zarejestruj się.</a>
 
     </main>
 

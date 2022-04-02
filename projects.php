@@ -10,7 +10,7 @@
 
 <body>
 
-<nav>
+    <nav>
         <ul>
             <a href="index.php"><li>Strona Główna</li></a>
             <a href="forum.php"><li>Prace</li></a>
