@@ -22,14 +22,11 @@
 
 <main>
 
-    <article>
+    <article id="search_field">
         <label>
             <h2>Wyszukaj</h2> <input type="text" id="search">
         </label>
 
-        <section id="found_field">
-
-        </section>
 
     </article>
 

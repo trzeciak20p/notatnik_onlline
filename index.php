@@ -22,6 +22,18 @@
         <a href="login.php">Zaloguj się</a>
     </nav>
 
+    <section>
+        <h2>Ulepsz do wersji premium</h2>
+        Dzięki subskrybcji ultra premium PRO max S++ ௹ lite 「FREE」otrzymasz:
+        <ul>
+            <li>Możliwośc współdzielenia projektów</li>
+            <li>3 dodatkowe warsty w edytorze</li>
+            <li>Nowe wspaniałe pędzle</li>
+        <ul>
+        A to wszystko już za jedyne: 2137 pesos syberyjskich/miesiąc! <br/>
+        Nie przegap okazji
+
+    </section>
 
     <article>
         <h2>Obserwowani</h2>
@@ -29,8 +41,8 @@
     </article>
 
     <article>
-        <h2>Ostatnie</h2>
-
+        <h2>Popularne prace</h2>
+        <!-- najbardzie polubiane prace -->
 
 
 
