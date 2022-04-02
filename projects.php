@@ -20,6 +20,8 @@
         </ul>
         <a href="login.php">Zaloguj się</a>
     </nav>
+
+    <nav>
     
 
 </body>
