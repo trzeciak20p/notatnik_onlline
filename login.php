@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in</title>
+    <title>Logowanie</title>
+    <link src="style.css" rel="stylesheet">
+    <link href="img/icon" rel="icon" sizes="32X32">
 </head>
 
 <body>

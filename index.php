@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OnPaint</title>
     <link src="style.css" rel="stylesheet">
+    <link href="img/icon" rel="icon" sizes="32X32">
 </head>
 
 <body>
