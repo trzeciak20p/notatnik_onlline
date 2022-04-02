@@ -22,6 +22,11 @@
     - Ultra Chad B) - użytkownik co wykupipł subskrybcję ultra premium PRO
     
 ## STRONA TECHNICZNA
+
+### Logowanie
+    Jak jesteś niezalogowany to w navie przycisk do logowania.
+    Na stronie logowania masz możliwość do zarajestrowania się i vice cersa.
+    Gdy wejdziesz na swoje profekty a nie jesteś zalogowany to przesyła na strone logowania z dopiskiem.
     
 ### Tworzenie rysunku
     

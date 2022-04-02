@@ -10,12 +10,13 @@
 
 <body>
 
-    <nav>   
+    <nav>
         <ul>
-            <a href="index.php"></a><li>Strona Główna</li></a>
-            <a href="notes.php"></a><li>Twoje Notatki</li></a>
-            <a href="login.php"><li>Logowanie</li></a>
+            <a href="index.php"><li>Strona Główna</li></a>
+            <a href="forum.php"><li>Prace</li></a>
+            <a href="projects.php"><li>Twoje Projekty</li></a>
         </ul>
+        <a href="login.php">Zaloguj się</a>
     </nav>
     
     <main>

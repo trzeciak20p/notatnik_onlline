@@ -10,6 +10,15 @@
 
 <body>
 
+    <nav>
+        <ul>
+            <a href="index.php"><li>Strona Główna</li></a>
+            <a href="forum.php"><li>Prace</li></a>
+            <a href="projects.php"><li>Twoje Projekty</li></a>
+        </ul>
+        <a href="login.php">Zaloguj się</a>
+    </nav>
+
     <form method="POST" action="index.html">
 
         <label>
