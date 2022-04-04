@@ -29,11 +29,11 @@
         </label>
         <label>
             <h3>Hasło</h3>
-            <input type="text" name="password">
+            <input type="password" name="password">
         </label>
         <label>
             <h3>Podaj hasło ponownie</h3>
-            <input type="text" name="password2">
+            <input type="password" name="password2">
         </label>
         
         <input type="checkbox" name="captcha" required="required"> Nie jestem robotem
