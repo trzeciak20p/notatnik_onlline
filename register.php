@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rejestracja</title>
-    <link src="style.css" rel="stylesheet">
-    <link href="img/icon" rel="icon" sizes="32X32">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon.png" sizes="32X32">
 </head>
 
 <body>
