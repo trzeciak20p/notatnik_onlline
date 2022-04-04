@@ -21,7 +21,7 @@
         <a href="login.php">Zaloguj się</a>
     </nav>
 
-    <form method="POST" action="index.html">
+    <form method="POST" action="index.php">
 
         <label>
             <h3>Login</h3>
