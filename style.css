@@ -1,18 +1,22 @@
 :root{
-    --nav_primary: #bd2fe1;
+    --nav_primary: #3b0a48;
+    --nav_secondary: #626161;
+    --site_primary: #ffbd45;
+    --site_secondary: #3e3939;
+    --search_primary: #5dcbf7;
 }
 
 body{
     margin: 0px;
     padding: 0px;
-    background-color: #626161;
-    color: wheat;
+    background-color: var(--site_secondary);
+    color: var(--site_primary);
 }
 nav{
     display: flex;
     align-items: center;
     text-transform: uppercase;
-    background-color: #3e3939;
+    background-color: var(--nav_secondary);
     width: 100%;
     height: 80px;
     border-botTOM: var(--nav_primary) solid 5px;    
@@ -31,7 +35,7 @@ nav ul li{
     line-height: 40px;
     text-align: center;
     font-size: 20px;
-    background-color: #3e3939;
+    background-color: var(--nav_secondary);
     border-left: var(--nav_primary) 3px solid;
     border-right: var(--nav_primary) 3px solid;
     transition: background-color 0.5s, color 0.3s;
@@ -40,8 +44,8 @@ nav ul a:nth-child(2) li{
     line-height: 80px;
 }
 nav ul li:hover{
-    background-color: #adadad;
-    color: #3e3939;
+    background-color: var(--nav_primary);
+    color: #fff;
 }
 nav a{
     text-decoration: none;
@@ -50,4 +54,34 @@ nav a{
 a{
     text-decoration: none;
     color: wheat;
+}
+main{
+    margin-left: 10px;
+    padding: 5px;
+}
+main article{
+    border: solid 4px var(--site_primary);
+    border-radius: 25px;
+    margin-top: 20px;
+    padding: 5px;
+}
+main article h2{
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-left: 20px;
+}
+main #search_field{
+    color: var(--search_primary);
+    border: solid 4px var(--search_primary);
+}
+main section{
+    border: solid 4px var(--site_primary);
+    border-radius: 25px;
+    margin-top: 20px;
+    padding: 5px;
+}
+main section h2{
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-left: 20px;
 }
