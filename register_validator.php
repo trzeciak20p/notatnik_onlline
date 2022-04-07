@@ -33,10 +33,9 @@ if($x){
     header("refresh:3; url=register.php");  
 }else{
     fwrite($f, "$login $password 0\n");         //0 - dla konta bez subskrybcji
-    fclose($f);
 }
 
-
-// header("Location: login.php");  
+fclose($f);
+header("Location: login.php");  
 exit;
 }

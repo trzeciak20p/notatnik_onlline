@@ -13,12 +13,31 @@ if( empty($_POST["login"]) || empty($_POST["password"]) ){
 }
 
 //sprawdzanie czy w pliku istnieje
+$login = trim($_POST["login"]);
+$f = fopen("data/users.txt", 'r+');
+$x = false;
+$qol = false;
+while(!feof($f)){
+    $line = explode(" ", fgets($f) );
+    if( $line[0] == $login){ 
+        if( $line[1] == $password){
+            $x = true;  
+        }else{
+            $qol = true;
+        }         
+    }
+}
+if($x){
+    $_SESSION["login"] = $_POST["login"];
+    $_SESSION["password"] = $_POST["password"];
+}else{
+    if($qol){
+        echo "Błędne hasło!";
+    }else{
+        echo "Podany login nie istnieje!";
+    }
+    header("refresh:3; url=login.php");  
+}
 
-
-$_SESSION["login"] = $_POST["login"];
-$_SESSION["password"] = $_POST["password"];
-
-
-
-// header("Location: index.php");  
+header("Location: index.php");  
 exit;
