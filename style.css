@@ -4,6 +4,7 @@
     --site_primary: #ffbd45;
     --site_secondary: #3e3939;
     --search_primary: #5dcbf7;
+    --search_secondary: #1221a6;
 }
 
 body{
@@ -76,6 +77,15 @@ main #search_field{
 }
 main #search_field #search{
     margin-left: 18px;
+    height: 20px;
+    width: 200px;
+    padding: 0px 0px 1px 5px;
+    line-height: 20px;
+    font-size: 15px;
+    color: var(--search_primary);
+    background-color: var(--search_secondary);
+    border: var(--search_primary) 3px solid;
+    border-radius: 10px;
 }
 main section{
     border: solid 4px var(--site_primary);
