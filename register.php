@@ -39,7 +39,7 @@
 
             <input type="checkbox" name="captcha" required="required"> Nie jestem robotem
 
-            <input type="submit" name="register" value="Zarejestruj">
+            <input type="submit" name="submit" value="Zarejestruj">
 
             <a href="login.php">Masz już konto? Zaloguj się.</a>
 

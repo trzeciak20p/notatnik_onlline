@@ -4,7 +4,7 @@ ob_start();
 if( !isset($_POST["submit"]) ){         //validacja
     echo "Nie łądnie tak wchodzić bez logowania!";
     header("refresh:3; url=register.php");  
-}
+}else{  
 if( empty($_POST["login"]) || empty($_POST["password"]) || empty($_POST["password2"]) ){
     echo "Ale podaj wszystko może";
     header("refresh:3; url=register.php");  
@@ -18,9 +18,23 @@ if( $_POST["password"] != $_POST["password2"] ){
     header("refresh:3; url=register.php");  
 }
 
-//zapisywanie do pliku
-fopen("data/users.txt")
+$login = trim($_POST["login"]);
+$f = fopen("data/users.txt", "r+");
+
+while(!feof($f)){
+    if( explode(" ", fgets($f) )[0] == $login){
+        echo "Podana nazwa użytkownika jest już zajęta!";
+        header("refresh:3; url=register.php");  
+    }
+
+
+}
+
+fwrite($f, ` ae`);
+
+
 
 
 // header("Location: login.php");  
 exit;
+}
