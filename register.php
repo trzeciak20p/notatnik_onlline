@@ -36,6 +36,7 @@
                 <h3>Podaj hasło ponownie</h3>
                 <input type="password" name="password2" required="required">
             </label>
+            <span>(nazwa użytkownika i hasło nie będą zawierać spacji)</span>
 
             <input type="checkbox" name="captcha" required="required"> Nie jestem robotem
 

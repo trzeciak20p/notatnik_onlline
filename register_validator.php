@@ -21,17 +21,20 @@ if( $_POST["password"] != $_POST["password2"] ){
 $login = trim($_POST["login"]);
 $password = trim($_POST["password"]);
 $f = fopen("data/users.txt", 'r+');
+$x = false;
 
 while(!feof($f)){
-    if( explode(" ", fgets($f) )[0] == $login){
-        echo "Podana nazwa użytkownika jest już zajęta!";
-        header("refresh:3; url=register.php");  
+    if( explode(" ", fgets($f) )[0] == $login){      
+        $x = true;       
     }
 }
-
-fwrite($f, `$login $password 0\n`);         //0 - dla konta bez subskrybcji
-
-
+if($x){
+    echo "Podana nazwa użytkownika jest już zajęta!";
+    header("refresh:3; url=register.php");  
+}else{
+    fwrite($f, "$login $password 0\n");         //0 - dla konta bez subskrybcji
+    fclose($f);
+}
 
 
 // header("Location: login.php");  
