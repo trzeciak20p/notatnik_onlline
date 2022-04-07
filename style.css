@@ -74,6 +74,9 @@ main #search_field{
     color: var(--search_primary);
     border: solid 4px var(--search_primary);
 }
+main #search_field #search{
+    margin-left: 18px;
+}
 main section{
     border: solid 4px var(--site_primary);
     border-radius: 25px;

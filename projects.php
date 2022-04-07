@@ -21,25 +21,26 @@
         <a href="login.php">Zaloguj się</a>
     </nav>
 
-    <article id="search_field">
-        <label>
-            <h2>Wyszukaj</h2> <input type="text" id="search">
-        </label>
-
-    </article>
-
-    <article id="projects">
-        <h2>Twoje projekty</h2>
-
-
-    </article>
-
-    <article id="shared_projects">
-        <h2>Współtworzone projekty</h2>
-
-
-    </article>
+    <main>
+        <article id="search_field">
+            <label>
+                <h2>Wyszukaj</h2> <input type="text" id="search">
+            </label>
     
+        </article>
+    
+        <article id="projects">
+            <h2>Twoje projekty</h2>
+    
+    
+        </article>
+    
+        <article id="shared_projects">
+            <h2>Współtworzone projekty</h2>
+    
+    
+        </article>
+    </main>
 
 </body>
 </html>

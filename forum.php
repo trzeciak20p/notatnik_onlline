@@ -20,28 +20,29 @@
         <a href="login.php">Zaloguj się</a>
     </nav>
 
-<main>
+    <main>
 
-    <article id="search_field">
-        <label>
-            <h2>Wyszukaj</h2> <input type="text" id="search">
-        </label>
-
-
-    </article>
+        <article id="search_field">
+            <label>
+                <h2>Wyszukaj</h2> <input type="text" id="search">
+            </label>
 
 
-    <article id="followed">
-        <h2>Obserwowani artyści</h2>
-        <!-- gdy nie zalogowany: Zaloguj się aby mieć dostęp do obserwowania swoich ulubionych artystów -->
+        </article>
+ 
+        <article id="followed">
+            <h2>Obserwowani artyści</h2>
+            <!-- gdy nie zalogowany: Zaloguj się aby mieć dostęp do obserwowania swoich ulubionych artystów -->
 
-    </article>
+        </article>
 
-    <article id="newest_works">
-        <h2>Najnowsze prace</h2>
-        
+        <article id="newest_works">
+            <h2>Najnowsze prace</h2>
 
-    </article>
+
+        </article>
+
+    </main>
 
 </main>
 
