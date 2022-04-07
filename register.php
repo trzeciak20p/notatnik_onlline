@@ -22,19 +22,19 @@
     </nav>
 
     <main>
-        <form method="POST" action="index.php">
+        <form method="POST" action="register_validator.php">
 
             <label>
                 <h3>Login</h3>
-                <input type="text" name="nickname">
+                <input type="text" name="login" required="required">
             </label>
             <label>
                 <h3>Hasło</h3>
-                <input type="password" name="password">
+                <input type="password" name="password" required="required">
             </label>
             <label>
                 <h3>Podaj hasło ponownie</h3>
-                <input type="password" name="password2">
+                <input type="password" name="password2" required="required">
             </label>
 
             <input type="checkbox" name="captcha" required="required"> Nie jestem robotem
@@ -45,6 +45,6 @@
 
         <form>
     <main>
-        
+
 </body>
 </html>

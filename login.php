@@ -23,18 +23,18 @@
     
     <main>
         
-        <form method="POST" action="index.php">
+        <form method="POST" action="login_validator.php">
 
             <label>
                 <h3>Login</h3>
-                <input type="text" name="nickname">
+                <input type="text" name="login" required="required">
             </label>
             <label>
                 <h3>Hasło</h3>
-                <input type="password" name="password">
+                <input type="password" name="password" required="required">
             </label>
             
-            <input type="submit" name="login" value="Zaloguj">
+            <input type="submit" name="submit" value="Zaloguj">
 
         <form>
 
