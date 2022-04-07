@@ -19,18 +19,17 @@ if( $_POST["password"] != $_POST["password2"] ){
 }
 
 $login = trim($_POST["login"]);
-$f = fopen("data/users.txt", "r+");
+$password = trim($_POST["password"]);
+$f = fopen("data/users.txt", 'r+');
 
 while(!feof($f)){
     if( explode(" ", fgets($f) )[0] == $login){
         echo "Podana nazwa użytkownika jest już zajęta!";
         header("refresh:3; url=register.php");  
     }
-
-
 }
 
-fwrite($f, ` ae`);
+fwrite($f, `$login $password 0\n`);         //0 - dla konta bez subskrybcji
 
 
 
