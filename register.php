@@ -26,20 +26,22 @@
         <form class="f_border" method="POST" action="register_validator.php">
 
             <label>
-                <h3>Login</h3>
+                <h2>Login</h2>
                 <input type="text" name="login" required="required">
             </label>
             <label>
-                <h3>Hasło</h3>
+                <h2>Hasło</h2>
                 <input type="password" name="password" required="required">
             </label>
             <label>
-                <h3>Podaj hasło ponownie</h3>
+                <h2>Podaj hasło ponownie</h2>
                 <input type="password" name="password2" required="required">
             </label>
             <span class="info">(nazwa użytkownika i hasło nie będą zawierać spacji)</span>
 
-            <input type="checkbox" name="captcha" required="required"> Nie jestem robotem
+            <label class="captcha">
+                <input type="checkbox" name="captcha" required="required"> Nie jestem robotem
+            <label>
 
             <input type="submit" name="submit" value="Zarejestruj">
 

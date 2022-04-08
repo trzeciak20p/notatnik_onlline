@@ -85,15 +85,14 @@ main #search_field{
 }
 main #search_field #search{
     margin-left: 18px;
-    height: 20px;
+    height: 30px;
     width: 200px;
     padding: 0px 0px 1px 5px;
-    line-height: 20px;
-    font-size: 15px;
+    font-size: 25px;
     color: var(--search_primary);
     background-color: var(--search_secondary);
     border: var(--search_primary) 3px solid;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 main section{
     border: solid 4px var(--site_primary);
@@ -118,9 +117,36 @@ main .f_border{
     border: 5px solid var(--form_primary);
     border-radius: 25px;
 }
+form input[type="text"], form input[type="password"]{
+    background-color: var(--nav_secondary);
+    color: #fff;
+    font-size: 25px;
+    border: solid 3px var(--form_primary);
+    border-radius: 15px;
+    height: 30px;
+}
 form input[type="submit"]{
-    margin-top: 30px;
+    cursor: pointer;
+    border: solid 4px #ffbd45;
+    background-color: #000;
+    color: var(--form_primary);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    height: 35px;
+    margin-top: 20px;
     display: block;
+}
+form .captcha{
+    user-select: none;
+    font-size: 20px;
+    display: block;
+    margin-top: 30px;
+}
+form input[type="checkbox"]{  
+    width: 20px;
+    height: 20px;
+    border: #000;
 }
 form .info{
     display: block;
