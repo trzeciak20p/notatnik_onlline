@@ -12,6 +12,7 @@ body{
     padding: 0px;
     background-color: var(--site_secondary);
     color: var(--site_primary);
+    font-family: Verdana;
 }
 nav{
     display: flex;
@@ -51,7 +52,13 @@ nav ul li:hover{
 nav a{
     text-decoration: none;
     color: var(--nav_primary);
-}   
+} 
+nav a[href="login.php"]{
+    font-size: 30px;
+}  
+nav a[href="login.php"]:hover{
+    color: #fff;
+}  
 a{
     text-decoration: none;
     color: wheat;
