@@ -21,8 +21,9 @@
         <a href="login.php">Zaloguj się</a>
     </nav>
 
-    <main>
-        <form method="POST" action="register_validator.php">
+    <main class="pls_center">
+
+        <form class="f_border" method="POST" action="register_validator.php">
 
             <label>
                 <h3>Login</h3>
@@ -36,7 +37,7 @@
                 <h3>Podaj hasło ponownie</h3>
                 <input type="password" name="password2" required="required">
             </label>
-            <span>(nazwa użytkownika i hasło nie będą zawierać spacji)</span>
+            <span class="info">(nazwa użytkownika i hasło nie będą zawierać spacji)</span>
 
             <input type="checkbox" name="captcha" required="required"> Nie jestem robotem
 
@@ -45,6 +46,7 @@
             <a href="login.php">Masz już konto? Zaloguj się.</a>
 
         <form>
+
     <main>
 
 </body>

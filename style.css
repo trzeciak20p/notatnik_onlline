@@ -5,6 +5,7 @@
     --site_secondary: #3e3939;
     --search_primary: #5dcbf7;
     --search_secondary: #1221a6;
+    --form_primary: #c1c1c1;
 }
 
 body{
@@ -105,3 +106,26 @@ main section h2{
     font-size: 25px;
     margin-left: 20px;
 }
+.pls_center{
+    display: flex;
+    justify-content: center;
+}
+form{
+    margin-top: 20px;
+}
+main .f_border{
+    padding: 10px;
+    border: 5px solid var(--form_primary);
+    border-radius: 25px;
+}
+form input[type="submit"]{
+    margin-top: 30px;
+    display: block;
+}
+form .info{
+    display: block;
+    margin-top: 5px;
+    font-size: 15px;
+    color: #aaa;
+}
+
