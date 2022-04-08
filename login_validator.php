@@ -15,6 +15,7 @@ if( empty($_POST["login"]) || empty($_POST["password"]) ){
 //sprawdzanie czy w pliku istnieje
 $login = trim($_POST["login"]);
 $password = trim($_POST["password"]);
+$prime;
 $f = fopen("data/users.txt", 'r+');
 $x = false;
 $qol = false;
@@ -23,6 +24,7 @@ while(!feof($f)){
     if( $line[0] == $login){ 
         if( $line[1] == $password){
             $x = true;  
+            $prime = $line[2];
         }else{
             $qol = true;
         }         
@@ -30,7 +32,8 @@ while(!feof($f)){
 }
 if($x){
     $_SESSION["login"] = $login;
-    $_SESSION["password"] = $password;
+    // $_SESSION["password"] = $password;       //nwm czy potrzebne wsm
+    $_SESSION["prime"] = $prime;
     header("Location: index.php");  
     exit;
 }else{
