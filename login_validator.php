@@ -29,8 +29,8 @@ while(!feof($f)){
     }
 }
 if($x){
-    $_SESSION["login"] = $_POST["login"];
-    $_SESSION["password"] = $_POST["password"];
+    $_SESSION["login"] = $login;
+    $_SESSION["password"] = $password;
     header("Location: index.php");  
     exit;
 }else{
