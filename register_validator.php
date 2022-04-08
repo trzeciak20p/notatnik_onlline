@@ -16,7 +16,9 @@ if( empty($_POST["captcha"]) ){
 if( $_POST["password"] != $_POST["password2"] ){
     echo "Podane hasła nie są takie same!";
     header("refresh:3; url=register.php");  
-}
+}else{
+
+
 
 $login = trim($_POST["login"]);
 $password = trim($_POST["password"]);
@@ -30,12 +32,14 @@ while(!feof($f)){
 }
 if($x){
     echo "Podana nazwa użytkownika jest już zajęta!";
+    fclose($f);
     header("refresh:3; url=register.php");  
 }else{
     fwrite($f, "$login $password 0\n");         //0 - dla konta bez subskrybcji
+    fclose($f);
+    header("Location: login.php");  
+    exit;
 }
 
-fclose($f);
-header("Location: login.php");  
-exit;
+}
 }
