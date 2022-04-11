@@ -1,6 +1,12 @@
+<!-- powrót do projektu -->
+
+
+
 <?php
 
-wyłapywanie tworzenia projektu
+
+
+// wyłapywanie tworzenia projektu
 
 
 
@@ -8,4 +14,4 @@ wyłapywanie tworzenia projektu
 
 
 
-otwierańsko
+// otwierańsko
