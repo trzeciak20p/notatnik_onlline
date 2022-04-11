@@ -17,7 +17,9 @@
             <a href="forum.php"><li>Prace</li></a>
             <a href="projects.php"><li>Twoje Projekty</li></a>
         </ul>
-        <a href="login.php">Zaloguj się</a>
+        <?php 
+        require('nav_login_icon.php'); 
+        ?>
     </nav>
 
     <main>
