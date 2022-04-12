@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,11 +17,14 @@
     </nav>
 
     <?php
+    
+    session_start();
+    if( isset($_SESSION["login"]) ){
 
-    if( isset($_POST["new_project"]) && !empty($_POST["project_name"]) )
+    if( isset($_POST["new_project"]) && !empty($_POST["project_name"]) ){
 
         if( $_POST["new_project"]){         //tworzenie nowego projektu
-            $dir = $_SESSION["login"] . "/" .  $_POST["project_name"];
+            $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["project_name"];
             if(is_dir($dir)){
                 
 
@@ -36,6 +38,10 @@
 
     }   //else if($_POST[""])       jakoś sprawdzanie czy wybierarsz nowy projekt 
 
+    }else{
+        echo "<h1>NIE JESTEŚ ZALOGOWANY!</h1>   <br/><br/><br/> <a href='login.php'> Zaloguj się </a>";
+
+    }
 
     // otwierańsko
 

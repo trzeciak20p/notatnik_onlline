@@ -37,6 +37,7 @@ if($x){
 }else{
     fwrite($f, "$login $password 0\n");         //0 - dla konta bez subskrybcji
     fclose($f);
+    mkdir("data/".$login);              //tworzenie folderu na projekty
     header("Location: login.php");  
     exit;
 }
