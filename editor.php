@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,18 +17,36 @@
         <a href="projects.php">Powrót</a>
     </nav>
 
+    <?php
+
+    if( isset($_POST["new_project"]) && !empty($_POST["project_name"]) )
+
+        if( $_POST["new_project"]){         //tworzenie nowego projektu
+            $dir = $_SESSION["login"] . "/" .  $_POST["project_name"];
+            if(is_dir($dir)){
+                
+
+            }else{
+                mkdir($dir);
+            }
+            
+        }else if(true){
+
+        }
+
+    }   //else if($_POST[""])       jakoś sprawdzanie czy wybierarsz nowy projekt 
 
 
-<?php
+    // otwierańsko
 
-
-
-// wyłapywanie tworzenia projektu
-
-
+?>
 
 
 
 
 
-// otwierańsko
+
+
+
+
+

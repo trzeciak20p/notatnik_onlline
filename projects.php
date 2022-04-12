@@ -33,14 +33,17 @@
     
         <article id="projects">
             <h2>Twoje projekty</h2>
+            <form method="POST" action="editor.php">
             <div> <!-- class="pls_center" -->
-                <form method="POST" action="editor.php">
+                
+                    <input type="text" name="project_name" required="required">
                     <input type="submit" name="new_project">
-                </form>
+                
                 <?php
                     require("projects_loader.php");
                 ?>
             </div>
+            </form>
         </article>
     
         <article id="shared_projects">
