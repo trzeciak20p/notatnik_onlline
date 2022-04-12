@@ -18,6 +18,13 @@ if( !isset($_SESSION["login"]) ){
     ';
 
     
+    $f = scandir("data/" . $_SESSION["login"]);
+    foreach($f as $key => $value){
+        if($value != "." && $value != ".."){
+            
+
+        }
+    }
 
     echo '
 
