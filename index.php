@@ -23,6 +23,10 @@
         ?>
     </nav>
 
+    <header>
+        <h1>Strona główna</h1>
+    </header>
+
     <main>
         
     <?php

@@ -26,8 +26,7 @@ if( !isset($_SESSION["login"]) ){
     foreach($f as $key => $value){
         if($value != "." && $value != ".."){
             echo "
-                    <input type='submit' name='open_project' value=". $value ." >
-            
+                <input type='submit' name='open_project' value=". $value ." >
             ";
 
         }

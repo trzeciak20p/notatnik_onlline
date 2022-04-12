@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    
+
     <nav>
         <ul>
             <a href="index.php"><li>Strona Główna</li></a>
@@ -23,6 +23,10 @@
         require('nav_login_icon.php'); 
         ?>
     </nav>
+
+    <header>
+        <h1>FORUM</h1>
+    </header>
 
     <main>
 

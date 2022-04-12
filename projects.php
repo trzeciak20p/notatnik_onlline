@@ -23,6 +23,10 @@
         ?>
     </nav>
 
+    <header>
+        <h1>Projekty</h1>
+    </header>
+
     <main>
         <article id="search_field">
             <label>
