@@ -38,7 +38,9 @@
                 
                     <input type="text" name="project_name" required="required">
                     <input type="submit" name="new_project">
-                
+
+                    <input>
+
                 <?php
                     require("projects_loader.php");
                 ?>

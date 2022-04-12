@@ -34,15 +34,18 @@
                 $load = false;      //godlike 2 lines save
             }  
     
-        }else if($_POST[""])       //jakoś sprawdzanie czy wybierarsz nowy projekt 
+        }else{       //jak nie nowy proj
 
+
+        }
+
+        // otwierańsko
+        
     }
-
-    // otwierańsko
 
     ?>
 
-
+    <canvas id="can" width="1200px" heigth="700px">
 
 
 
