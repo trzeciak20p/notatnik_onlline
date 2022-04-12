@@ -11,6 +11,8 @@
     <link rel="icon" href="img/icon.png" sizes="32X32">
 </head>
 
+<body>
+    
     <nav>
         <ul>
             <a href="index.php"><li>Strona Główna</li></a>
@@ -46,7 +48,8 @@
 
     </main>
 
-</main>
+</body>
+</html>
 
 
 
