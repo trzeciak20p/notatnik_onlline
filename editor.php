@@ -22,19 +22,12 @@
     if( isset($_SESSION["login"]) ){
 
     if( isset($_POST["new_project"]) && !empty($_POST["project_name"]) ){
-
-        if( $_POST["new_project"]){         //tworzenie nowego projektu
-            $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["project_name"];
-            if(is_dir($dir)){
-                
-
-            }else{
-                mkdir($dir);
-            }
-            
-        }else if(true){
-
+        //tworzenie nowego projektu
+        $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["project_name"];
+        if(!is_dir($dir)){
+            mkdir($dir);
         }
+            
 
     }   //else if($_POST[""])       jakoś sprawdzanie czy wybierarsz nowy projekt 
 
