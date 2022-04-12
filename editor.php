@@ -19,26 +19,28 @@
     <?php
     
     session_start();
-    if( isset($_SESSION["login"]) ){
+    if( !isset($_SESSION["login"]) ){
 
-    if( isset($_POST["new_project"]) && !empty($_POST["project_name"]) ){
-        //tworzenie nowego projektu
-        $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["project_name"];
-        if(!is_dir($dir)){
-            mkdir($dir);
-        }
-            
-
-    }   //else if($_POST[""])       jakoś sprawdzanie czy wybierarsz nowy projekt 
+        echo "<h1>NIE JESTEŚ ZALOGOWANY!</h1>   <br/><br/><br/> <a href='login.php'> Zaloguj się </a>";
 
     }else{
-        echo "<h1>NIE JESTEŚ ZALOGOWANY!</h1>   <br/><br/><br/> <a href='login.php'> Zaloguj się </a>";
+
+        $load = true;
+        if( isset($_POST["new_project"]) && !empty($_POST["project_name"]) ){
+            //tworzenie nowego projektu lub wybieranie istniejącego jak dir istnieje
+            $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["project_name"];
+            if(!is_dir($dir)){
+                mkdir($dir);
+                $load = false;      //godlike 2 lines save
+            }  
+    
+        }else if($_POST[""])       //jakoś sprawdzanie czy wybierarsz nowy projekt 
 
     }
 
     // otwierańsko
 
-?>
+    ?>
 
 
 
@@ -48,4 +50,5 @@
 
 
 
-
+</body>
+</html>
