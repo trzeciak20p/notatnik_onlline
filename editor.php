@@ -34,7 +34,9 @@
                 $load = false;      //godlike 2 lines save
             }  
     
-        }else{       //jak nie nowy proj
+        }else if( isset($_POST["open_project"]) ){
+            $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["open_project"];
+            echo "<h1>". $_POST["open_project"] ." </h1>";   
 
 
         }

@@ -9,12 +9,16 @@ if( !isset($_SESSION["login"]) ){
     echo '
     <h2>Twoje projekty</h2>
 
-    <form method="POST" action="editor.php">
+    
         <div class="pls_center">
             <div>
-                <input type="text" name="project_name" required="required">
-                <input type="submit" name="new_project">
+                <form method="POST" action="editor.php">
+                    <input type="text" name="project_name" required="required">
+                    <input type="submit" name="new_project">
+                </form>
             </div>
+            <form method="POST" action="editor.php">
+            
     ';
 
     
@@ -30,8 +34,8 @@ if( !isset($_SESSION["login"]) ){
     }
 
     echo '
-
+            </form>
         </div>
-    </form>';        
+    ';        
 
 }
