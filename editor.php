@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PaintOn</title>      
+    <link rel="stylesheet" href="style_editor.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/icon.png" sizes="32X32">
 </head>
@@ -14,14 +15,13 @@
 
     <nav>
         <a href="projects.php">Powrót</a>
-    </nav>
 
     <?php
     
     session_start();
     if( !isset($_SESSION["login"]) ){
 
-        echo "<h1>NIE JESTEŚ ZALOGOWANY!</h1>   <br/><br/><br/> <a href='login.php'> Zaloguj się </a>";
+        echo "</nav><h1>NIE JESTEŚ ZALOGOWANY!</h1>   <br/><br/><br/> <a href='login.php'> Zaloguj się </a>";
 
     }else{
 
@@ -36,7 +36,7 @@
     
         }else if( isset($_POST["open_project"]) ){
             $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["open_project"];
-            echo "<h1>". $_POST["open_project"] ." </h1>";   
+            echo "<span>". $_POST["open_project"] ."</span> </nav>";   
 
 
         }
@@ -47,7 +47,7 @@
 
     ?>
 
-    <canvas id="can" width="1200px" heigth="700px">
+    <canvas id="can" width=750px" height="500px">
 
 
 

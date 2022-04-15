@@ -17,6 +17,8 @@ body{
 }
 nav{
     display: flex;
+    position: sticky;
+    top: 0px;
     align-items: center;
     text-transform: uppercase;
     background-color: var(--nav_secondary);
@@ -162,4 +164,4 @@ form .info{
     font-size: 15px;
     color: #aaa;
 }
-
+/* PROJECTS */

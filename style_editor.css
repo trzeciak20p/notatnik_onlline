@@ -1,0 +1,26 @@
+nav{
+    display: grid !important;
+    grid-template-columns: 20px 120px 1fr auto 50px;
+}
+nav a {
+    margin-left: 40px;
+    width: 120px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 20px;
+    background-color: var(--nav_secondary);
+    border-left: var(--nav_primary) 3px solid;
+    border-right: var(--nav_primary) 3px solid;
+    transition: background-color 0.5s, color 0.3s;
+    grid-column: 2;
+}
+nav a:hover{
+    background-color: var(--nav_primary);
+    color: #fff;
+}
+nav span{
+    font-size: 40px;
+    line-height: 100%;
+    grid-column: 4;
+}
