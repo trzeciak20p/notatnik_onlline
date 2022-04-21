@@ -38,22 +38,29 @@
             $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["open_project"];
             echo "<span>". $_POST["open_project"] ."</span> </nav>";   
 
-
         }
 
-        // otwierańsko
+        echo '<main> <canvas id="can" width="750px" height="400px">';
+
+        //rysowanie
         
+
+        //zapisywanie
     }
 
     ?>
 
-    <canvas id="can" width=750px" height="500px">
+    
 
 
+    <div id="editor_feed">
+        <div id="tools">
 
+        
+        </div>    
+        <input id="save_project" type="button">
+    <div>        
 
-
-
-
+    </main>
 </body>
 </html>
