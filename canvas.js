@@ -33,7 +33,6 @@ const tools = document.querySelectorAll("#tools input[type='button']")     //too
 tools[0].addEventListener("click", toolChange(0))
 
 p_canvas.addEventListener("mousemove", showPen)
-p_canvas.addEventListener("mousemove", mousePos)
 p_canvas.addEventListener("mouseenter", sizeUpdate)
 s_canvas.addEventListener("mousedown", draw)
 
@@ -45,15 +44,13 @@ function mousePos(){
     s_p.x = p.x
     s_p.y = p.y
     console.log("mouse: ", p.x, p.y)
-    
 }
 
 function showPen(){
-
-    console.log("pen size: ", p.size)
-    pCanvasTransparent()
-    ShowPen()
-
+    mousePos()
+    
+    // pCanvasTransparent()
+    return
 }
 
 
@@ -71,9 +68,6 @@ function draw(){
 
 }
 
-function showPen(){
-
-}
 
 function pCanvasTransparent(coor){
     p.fillstyle = "#0000ffff"
