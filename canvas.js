@@ -1,5 +1,5 @@
 const p_canvas = document.getElementById("pen_canvas")   //canvas 
-const s_canvas =  document.getElementById("show_canvas")
+const s_canvas = document.getElementById("show_canvas")
 const m_p = p_canvas.getContext("2d")
 const s_p = s_canvas.getContext("2d")
 
@@ -45,8 +45,8 @@ tools[0].addEventListener("click", toolChange(0))
 
 p_canvas.addEventListener("mousemove", showPen)
 p_canvas.addEventListener("mouseenter", penUpdate)
-s_canvas.addEventListener("mousedown", draw)
-
+p_canvas.addEventListener("mousedown", draw)
+p_canvas.addEventListener("mouseup", stopDraw)
 
 function mousePos(){       
     let e = window.event
@@ -59,24 +59,29 @@ function mousePos(){
 
 function showPen(){
     mousePos()
-
     drawPen()
 
 }
 
-
+let draw_timeout
 function draw(){
 
-    switch (current_tool) {
-        case 0:
+    s_p.fillstyle = p.color
+    s_p.fillRect( p.x - p.size/2 + 1, p.y - p.size/2 + 1, p.size , p.size)
+    // switch (current_tool) {
+    //     case 0:
             
-            break;
+    //         break;
     
-        case 1:
-        default:
-            break;
-    }
+    //     case 1:
+    //     default:
+    //         break;
+    // }
 
+    draw_timeout = setTimeout(draw, 10)
+}
+function stopDraw(){
+    clearTimeout(draw_timeout)
 }
 
 function drawPen(){

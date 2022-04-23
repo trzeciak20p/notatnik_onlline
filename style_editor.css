@@ -25,12 +25,12 @@ nav span{
     grid-column: 4;
 }
 #show_canvas{
-    /* cursor: none; */
+    cursor: none;
     position: absolute;
     background-color: red;
 }
 #pen_canvas{
-    /* cursor: none; */
+    cursor: none;
     z-index: 2;
     position: relative;
     background-color: transparent;
