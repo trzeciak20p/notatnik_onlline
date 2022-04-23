@@ -1,6 +1,7 @@
 const p_canvas = document.getElementById("pen_canvas")   //canvas 
 const s_canvas =  document.getElementById("show_canvas")
-let p = p_canvas.getContext("2d")
+const m_p = p_canvas.getContext("2d")
+const s_p = s_canvas.getContext("2d")
 
 function Pen(x, y, color){      //klasa do przechowywania pozycji/wartości tego do rysowania
     this.x = x;
@@ -10,16 +11,26 @@ function Pen(x, y, color){      //klasa do przechowywania pozycji/wartości tego
 }
 
 p = new Pen(0, 0, "#000")
-s_p = new Pen(0, 0, "#000")
 
-function sizeUpdate(){
-    inpt_size = parseInt(document.getElementById("pen_size").value)
+function penUpdate(){
+    const inpt_size = parseInt(document.getElementById("pen_size").value)
     if( inpt_size > 1){
         p.size = inpt_size
         s_p.zise = inpt_size
     }else{
         p.size = 1
         s_p.size = 1
+    }
+    const inpt_color = document.getElementById("pen_color")
+    try{
+        if(inpt_color.value[0] == "#"){         //sprawdzanie czy # jest na początku i ułatwianie ludziom życia
+            p.color = inpt_color.value;
+        }else{
+            p.color = "#" + inpt_color.value;
+        }
+        return;
+    }catch{
+        p.color = "#fff";
     }
 }
 
@@ -33,7 +44,7 @@ const tools = document.querySelectorAll("#tools input[type='button']")     //too
 tools[0].addEventListener("click", toolChange(0))
 
 p_canvas.addEventListener("mousemove", showPen)
-p_canvas.addEventListener("mouseenter", sizeUpdate)
+p_canvas.addEventListener("mouseenter", penUpdate)
 s_canvas.addEventListener("mousedown", draw)
 
 
@@ -43,14 +54,14 @@ function mousePos(){
     p.y = e.clientY - Math.round(p_canvas.getBoundingClientRect().y)
     s_p.x = p.x
     s_p.y = p.y
-    console.log("mouse: ", p.x, p.y)
+    // console.log("mouse: ", p.x, p.y)
 }
 
 function showPen(){
     mousePos()
-    
-    // pCanvasTransparent()
-    return
+
+    drawPen()
+
 }
 
 
@@ -68,8 +79,9 @@ function draw(){
 
 }
 
-
-function pCanvasTransparent(coor){
-    p.fillstyle = "#0000ffff"
-    p.fillRect(0,0,700,400)
+function drawPen(){
+    m_p.clearRect(0, 0, 750, 400)
+    m_p.fillstyle = p.color
+    m_p.fillRect( p.x - p.size/2 + 1, p.y - p.size/2 + 1, p.size , p.size)
 }
+

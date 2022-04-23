@@ -52,9 +52,12 @@
                         <input id="tool_pen" type="button" value="pen">
                         
                         <br/>
-                        <label> Rozmiar pędzla:
-                            <input id="pen_size" type="number" value="1">
+                        <label> Kolor pędzla:
+                            <input id="pen_color" type="text" value="fff">
                         </label>
+                        <label> Rozmiar pędzla:
+                            <input id="pen_size" type="number" value="25">
+                        </label>                      
                     </div>    
                     <input id="save_project" type="button" value="ZAPISZ">
                 <div>
