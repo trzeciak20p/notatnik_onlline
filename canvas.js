@@ -47,6 +47,7 @@ p_canvas.addEventListener("mousemove", showPen)
 p_canvas.addEventListener("mouseenter", penUpdate)
 p_canvas.addEventListener("mousedown", draw)
 p_canvas.addEventListener("mouseup", stopDraw)
+p_canvas.addEventListener("mouseleave", clearCanvas)        //czyszczenie kursora po wyjechaniu
 
 function mousePos(){       
     let e = window.event
@@ -85,8 +86,11 @@ function stopDraw(){
 }
 
 function drawPen(){
-    m_p.clearRect(0, 0, 750, 400)
+    m_p.clearRect(0, 0, 750, 400)       //czyszczenie poprzedniego kursora
     m_p.fillstyle = p.color
     m_p.fillRect( p.x - p.size/2 + 1, p.y - p.size/2 + 1, p.size , p.size)
 }
 
+function clearCanvas(){
+    m_p.clearRect(0, 0, 750, 400)
+}
