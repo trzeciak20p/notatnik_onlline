@@ -1,4 +1,5 @@
-const p_canvas = document.getElementById("main_canvas")   //canvas  
+const p_canvas = document.getElementById("main_canvas")   //canvas 
+const s_canvas =  document.getElementById("show_canvas")
 let p = p_canvas.getContext("2d")
 
 function Pen(x, y, color){      //klasa do przechowywania pozycji/wartości tego do rysowania
@@ -25,7 +26,7 @@ function mousePos(){
 }
 
 p_canvas.addEventListener("mouseover", showPen)
-canvas.addEventListener("mousedown", draw)
+s_canvas.addEventListener("mousedown", draw)
 p_canvas.addEventListener("mouseout", stopPen)
 let pen_timeout
 
@@ -38,7 +39,7 @@ function showPen(){
 }
 function stopPen(){
 
-    clearTimeout(pen_timeout)
+    clearInterval(pen_timeout)
 }
 
 function draw(){
