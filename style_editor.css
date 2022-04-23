@@ -24,3 +24,6 @@ nav span{
     line-height: 100%;
     grid-column: 4;
 }
+#main_canvas{
+    background-color: #fff;
+}

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style_editor.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/icon.png" sizes="32X32">
-    <script href="canvas.js" defer>
+    <script src="canvas.js" defer></script>
 </head>
 
 <body>
@@ -41,14 +41,22 @@
 
 
         }
-
-        // otwierańsko
+        //struktura jak wszystko jest git
+        echo '<canvas id="main_canvas" width="750px" height="400px"></canvas>
+                <div id="editor_feed">
+                    <div id="tools">
+                        <input id="tool_pen" type="button" value="pen">
+        
+                    </div>    
+                    <input id="save_project" type="button" value="ZAPISZ">
+                <div>';
+        
         
     }
 
     ?>
 
-    <canvas id="can" width=750px" height="500px">
+    <canvas id="main_canvas" width="750px" height="400px">
 
 
 
