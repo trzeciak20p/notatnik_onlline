@@ -45,7 +45,7 @@
         echo '  <main>
                 <div>
                     <canvas id="show_canvas" width="750px" height="400px"></canvas>
-                    <canvas id="main_canvas" width="750px" height="400px"></canvas>
+                    <canvas id="pen_canvas" width="750px" height="400px"></canvas>
                 </div>
                 <div id="editor_feed">
                     <div id="tools">
