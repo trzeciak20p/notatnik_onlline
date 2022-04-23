@@ -24,6 +24,13 @@ nav span{
     line-height: 100%;
     grid-column: 4;
 }
-#main_canvas{
+#show_canvas{
+    cursor: none;
+    position: absolute;
     background-color: #fff;
+}
+#main_canvas{
+    cursor: none;
+    position: relative;
+    background-color: transparent;
 }

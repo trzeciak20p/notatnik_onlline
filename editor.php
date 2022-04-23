@@ -42,21 +42,29 @@
 
         }
         //struktura jak wszystko jest git
-        echo '<canvas id="main_canvas" width="750px" height="400px"></canvas>
+        echo '  <main>
+                <div>
+                    <canvas id="show_canvas" width="750px" height="400px"></canvas>
+                    <canvas id="main_canvas" width="750px" height="400px"></canvas>
+                </div>
                 <div id="editor_feed">
                     <div id="tools">
                         <input id="tool_pen" type="button" value="pen">
-        
+                        
+                        <br/>
+                        <label> Rozmiar pędzla:
+                            <input id="pen_size" type="number" value="1">
+                        </label>
                     </div>    
                     <input id="save_project" type="button" value="ZAPISZ">
-                <div>';
+                <div>
+                <main>';
         
         
     }
 
     ?>
 
-    <canvas id="main_canvas" width="750px" height="400px">
 
 
 
