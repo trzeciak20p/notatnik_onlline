@@ -5,10 +5,23 @@ let p = p_canvas.getContext("2d")
 function Pen(x, y, color){      //klasa do przechowywania pozycji/wartości tego do rysowania
     this.x = x;
     this.y = y;
+    this.size = 1;
     this.color = color;
 }
+
 p = new Pen(0, 0, "#000")
 s_p = new Pen(0, 0, "#000")
+
+function sizeUpdate(){
+    inpt_size = parseInt(document.getElementById("pen_size").value)
+    if( inpt_size > 1){
+        p.size = inpt_size
+        s_p.zise = inpt_size
+    }else{
+        p.size = 1
+        s_p.size = 1
+    }
+}
 
 let current_tool = 0
 function toolChange(ae){
@@ -21,34 +34,28 @@ tools[0].addEventListener("click", toolChange(0))
 
 p_canvas.addEventListener("mousemove", showPen)
 p_canvas.addEventListener("mousemove", mousePos)
+p_canvas.addEventListener("mouseenter", sizeUpdate)
 s_canvas.addEventListener("mousedown", draw)
-p_canvas.addEventListener("mouseout", stopPen)
-let pen_timeout
-let mouse_timeout
+
 
 function mousePos(){       
     let e = window.event
     p.x = e.clientX - Math.round(p_canvas.getBoundingClientRect().x)
     p.y = e.clientY - Math.round(p_canvas.getBoundingClientRect().y)
-    console.log(p.x, p.y)
     s_p.x = p.x
     s_p.y = p.y
+    console.log("mouse: ", p.x, p.y)
     
-    mouse_timeout = setInterval(showPen, 100)
 }
 
 function showPen(){
-    p_size = parseInt(document.getElementById("pen_size").value)
-    if( p_size < 1){
-        p_size = 1
-    }
 
-    pen_timeout = setInterval(showPen, 100)
+    console.log("pen size: ", p.size)
+    pCanvasTransparent()
+    ShowPen()
+
 }
-function stopPen(){
-    clearInterval(pen_timeout)
-    clearInterval(mouse_timeout)
-}
+
 
 function draw(){
 
@@ -64,4 +71,11 @@ function draw(){
 
 }
 
+function showPen(){
 
+}
+
+function pCanvasTransparent(coor){
+    p.fillstyle = "#0000ffff"
+    p.fillRect(0,0,700,400)
+}
