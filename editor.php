@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style_editor.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/icon.png" sizes="32X32">
+    <script href="canvas.js" defer>
 </head>
 
 <body>
