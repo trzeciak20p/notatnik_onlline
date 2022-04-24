@@ -27,7 +27,7 @@ nav span{
 #show_canvas{
     cursor: none;
     position: absolute;
-    background-color: red;
+    background-color: white;
 }
 #pen_canvas{
     cursor: none;

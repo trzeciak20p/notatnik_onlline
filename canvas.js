@@ -28,7 +28,6 @@ function penUpdate(){
         }else{
             p.color = "#" + inpt_color.value;
         }
-        return;
     }catch{
         p.color = "#fff";
     }
@@ -40,8 +39,8 @@ function toolChange(ae){
 }
 
 const tools = document.querySelectorAll("#tools input[type='button']")     //tools
-
-tools[0].addEventListener("click", toolChange(0))
+tools[0].addEventListener("click", ()=>{toolChange(0)})
+tools[1].addEventListener("click", ()=>{toolChange(1)})
 
 p_canvas.addEventListener("mousemove", showPen)
 p_canvas.addEventListener("mouseenter", penUpdate)
@@ -67,17 +66,25 @@ function showPen(){
 let draw_timeout
 function draw(){
 
-    s_p.fillstyle = p.color
-    s_p.fillRect( p.x - p.size/2 + 1, p.y - p.size/2 + 1, p.size , p.size)
-    // switch (current_tool) {
-    //     case 0:
+    s_p.fillStyle = p.color     //zmiana koloru
+    s_p.strokeStyle = p.color
+    switch (current_tool) {     //kształt
+        case 0:
+            s_p.fillRect( p.x - p.size/2 + 1, p.y - p.size/2 + 1, p.size , p.size)        
+            break;
+
+        case 1:   
+            s_p.beginPath()
+            s_p.arc(p.x, p.y, p.size/2, 0, 2 * Math.PI);
+            s_p.stroke()
+            s_p.closePath()
+            s_p.fill()
             
-    //         break;
-    
-    //     case 1:
-    //     default:
-    //         break;
-    // }
+            break;
+
+        default:
+            break;
+    }
 
     draw_timeout = setTimeout(draw, 10)
 }
@@ -87,8 +94,25 @@ function stopDraw(){
 
 function drawPen(){
     m_p.clearRect(0, 0, 750, 400)       //czyszczenie poprzedniego kursora
-    m_p.fillstyle = p.color
-    m_p.fillRect( p.x - p.size/2 + 1, p.y - p.size/2 + 1, p.size , p.size)
+    m_p.fillStyle = p.color     //zmiana koloru
+    m_p.strokeStyle = p.color
+    switch (current_tool) {     //kształt
+        case 0:
+            m_p.fillRect( p.x - p.size/2 + 1, p.y - p.size/2 + 1, p.size , p.size)        
+            break;
+
+        case 1:   
+            m_p.beginPath()
+            m_p.arc(p.x, p.y, p.size/2, 0, 2 * Math.PI);
+            m_p.stroke()
+            m_p.closePath()
+            m_p.fill()
+            
+            break;
+
+        default:
+            break;
+    }
 }
 
 function clearCanvas(){

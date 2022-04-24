@@ -49,7 +49,8 @@
                 </div>
                 <div id="editor_feed">
                     <div id="tools">
-                        <input id="tool_pen" type="button" value="pen">
+                        <input id="tool_square" type="button" value="kwadrat">
+                        <input id="tool_circle" type="button" value="kółko">
                         
                         <br/>
                         <label> Kolor pędzla:
