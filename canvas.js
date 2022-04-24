@@ -44,7 +44,8 @@ tools[1].addEventListener("click", ()=>{toolChange(1)})
 
 p_canvas.addEventListener("mousemove", showPen)
 p_canvas.addEventListener("mousedown", draw)
-p_canvas.addEventListener("mouseup", stopDraw)
+document.addEventListener("mouseup", stopDraw)
+p_canvas.addEventListener("mouseout", stopDraw)
 p_canvas.addEventListener("mouseleave", clearCanvas)        //czyszczenie kursora po wyjechaniu
 
 function mousePos(){       
@@ -90,6 +91,7 @@ function draw(){
 }
 function stopDraw(){
     clearTimeout(draw_timeout)
+    console.log("stopped")
 }
 
 function drawPen(){

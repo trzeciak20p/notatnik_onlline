@@ -54,7 +54,7 @@
                         
                         <br/>
                         <label> Kolor pędzla:
-                            <input id="pen_color" type="text" value="000" placeholder="123456">
+                            <input id="pen_color" type="color">
                         </label>
                         <label> Rozmiar pędzla:
                             <input id="pen_size" type="number" value="25">
