@@ -29,7 +29,7 @@ function penUpdate(){
             p.color = "#" + inpt_color.value;
         }
     }catch{
-        p.color = "#fff";
+        p.color = "#000";
     }
 }
 
