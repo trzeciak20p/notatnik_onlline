@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/icon.png" sizes="32X32">
     <script src="canvas.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -42,7 +43,9 @@
 
         }
         //struktura jak wszystko jest git
-        echo '  <main>
+        
+        
+        echo '  </nav><main>
                 <div>
                     <canvas id="show_canvas" width="750px" height="400px"></canvas>
                     <canvas id="pen_canvas" width="750px" height="400px"></canvas>
@@ -61,9 +64,10 @@
                         </label>                      
                     </div>    
                     <input id="save_project" type="button" value="ZAPISZ">
-                <div>
-                <main>';
+                </div>
+                </main>';
         
+                include("project_saver.php");
         
     }
 

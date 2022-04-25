@@ -1,3 +1,5 @@
+
+
 const p_canvas = document.getElementById("pen_canvas")   //canvas 
 const s_canvas = document.getElementById("show_canvas")
 const m_p = p_canvas.getContext("2d")
@@ -120,3 +122,22 @@ function drawPen(){
 function clearCanvas(){
     m_p.clearRect(0, 0, 750, 400)
 }
+
+document.getElementById("save_project").addEventListener("click", saveProject)
+
+function saveProject(){
+
+    let b = s_canvas.toDataURL("image/txt")  
+    // $.ajax({
+
+    let cc = new XMLHttpRequest()
+    cc.open("POST", "project_saver.php")
+    cc.setRequestHeader("canvas", "ae")
+    cc.onload = () => {
+        console.log(cc.response)
+
+    }
+    cc.send()
+
+}
+
