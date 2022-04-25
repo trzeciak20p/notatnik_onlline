@@ -33,3 +33,5 @@
     Zapisujesz canvasa do png i se wczytujesz. Przy warstwach wczytujesz warstwa po warstwie.
     Import plików z zewnątrz: funkcja co patrzy czy guzik czy schowek (wtedy oidpowiednio pobiera i przekleja na canvasa)
     Zmienna na określanie która warstwa jest aktywna
+    
+#IntelliJ
