@@ -127,15 +127,13 @@ document.getElementById("save_project").addEventListener("click", saveProject)
 
 function saveProject(){
 
-    let b = s_canvas.toDataURL("image/txt")  
-    // $.ajax({
-
+    let b = s_canvas.toDataURL("image/webp")  
+    console.log(b)
     let cc = new XMLHttpRequest()
-    cc.open("POST", "project_saver.php")
-    cc.setRequestHeader("canvas", "ae")
+    cc.open("POST", "editor.php")
+    cc.setRequestHeader("canvas", b)
     cc.onload = () => {
-        console.log(cc.response)
-
+        console.log("ae")
     }
     cc.send()
 
