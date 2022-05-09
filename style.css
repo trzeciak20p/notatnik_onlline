@@ -165,3 +165,8 @@ form .info{
     color: #aaa;
 }
 /* PROJECTS */
+
+
+.plshide {
+  display: none;
+}
