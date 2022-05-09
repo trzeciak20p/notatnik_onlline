@@ -1,9 +1,16 @@
 
-
 const p_canvas = document.getElementById("pen_canvas")   //canvas 
 const s_canvas = document.getElementById("show_canvas")
 const m_p = p_canvas.getContext("2d")
 const s_p = s_canvas.getContext("2d")
+
+//wczytywanie canvasa
+let saved_img = new Image()
+saved_img.src = document.getElementById("saved").innerText  //wczytywanie src
+saved_img.onload = () => {
+    s_p.drawImage(saved_img, 0, 0)
+    console.log("Ae")
+}
 
 function Pen(x, y, color){      //klasa do przechowywania pozycji/wartości tego do rysowania
     this.x = x;
@@ -128,11 +135,10 @@ document.getElementById("save_project").addEventListener("click", saveProject)
 function saveProject(){
 
     let b = s_canvas.toDataURL("image/webp")  
-    console.log(b)
-    
     let ae = document.createElement("input")
     ae.setAttribute("name", "canvas")
     ae.setAttribute("value", b)
+    ae.setAttribute("class", "plshide")
     document.querySelector("form[action='editor.php']").appendChild(ae)
     
 

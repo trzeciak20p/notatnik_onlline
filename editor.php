@@ -68,13 +68,11 @@
                         <input class="plshide" name="open_project" value="a">
                         <input class="plshide" name="project_name" value="a">
                     </form>
+                        <div class="plshide" id="saved">' . $_POST["canvas"] .'</div>
                     </div>
                 </main>';
         
-
-
-                echo $_POST["canvas"];
-
+        
         
     }
 
