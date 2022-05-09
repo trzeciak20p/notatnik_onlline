@@ -62,18 +62,19 @@
                         <label> Rozmiar pędzla:
                             <input id="pen_size" type="number" value="25">
                         </label>                      
-                    </div>    
-                    <input id="save_project" type="button" value="ZAPISZ">
-                </div>
+                    </div>
+                    <form method="POST" action="editor.php">
+                        <input id="save_project" type="submit" value="ZAPISZ">
+                        <input class="plshide" name="open_project" value="a">
+                        <input class="plshide" name="project_name" value="a">
+                    </form>
+                    </div>
                 </main>';
         
+
+
                 echo $_POST["canvas"];
 
-                $save = $_POST["canvas"];
-                $dir = "data/" . $_SESSION["login"]. "/". $_POST["open_project"]. "/canvas1.jpg";
-                echo $dir;
-                $f = fopen($dir, "w+");
-                fwrite($f, $_POST["canvas"]);
         
     }
 

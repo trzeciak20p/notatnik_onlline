@@ -129,13 +129,12 @@ function saveProject(){
 
     let b = s_canvas.toDataURL("image/webp")  
     console.log(b)
-    let cc = new XMLHttpRequest()
-    cc.open("POST", "editor.php")
-    cc.setRequestHeader("canvas", b)
-    cc.onload = () => {
-        console.log("ae")
-    }
-    cc.send()
+    
+    let ae = document.createElement("input")
+    ae.setAttribute("name", "canvas")
+    ae.setAttribute("value", b)
+    document.querySelector("form[action='editor.php']").appendChild(ae)
+    
 
 }
 
