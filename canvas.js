@@ -106,7 +106,13 @@ function stopDraw(){
 function drawPen(){
     m_p.clearRect(0, 0, 750, 400)       //czyszczenie poprzedniego kursora
     m_p.fillStyle = p.color     //zmiana koloru
-    m_p.strokeStyle = p.color
+    if(p.color != "#fff" || p.color != "#ffffff"){      //obramówka kursora
+        m_p.strokeStyle = "#fff"
+    }else{
+        m_p.strokeStyle = "#000"
+
+    }
+
     switch (current_tool) {     //kształt
         case 0:
             m_p.fillRect( p.x - p.size/2 + 1, p.y - p.size/2 + 1, p.size , p.size)        
