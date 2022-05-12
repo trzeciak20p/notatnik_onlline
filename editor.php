@@ -27,12 +27,17 @@
 
     }else{
 
+        //tworzenie nowego projektu lub wybieranie istniejącego jak dir istnieje
+        $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["project_name"];    //folder projektu
+        $layers_dir = $dir . "layers.txt";
         $load = true;
         if( isset($_POST["new_project"]) && !empty($_POST["project_name"]) ){
-            //tworzenie nowego projektu lub wybieranie istniejącego jak dir istnieje
-            $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["project_name"];
+            
             if(!is_dir($dir)){
                 mkdir($dir);
+                $layers = fopen($layers_dir, "a+");     //tworzenie pliku (nwm czy tak można)
+                fclose($layers);
+                
                 $load = false;      //godlike 2 lines save
             }  
     
@@ -44,6 +49,9 @@
         }
         //struktura jak wszystko jest git
         
+        if($load){
+
+        }
         
         echo '  </nav><main>
                 <div>
@@ -68,12 +76,28 @@
                         <input class="plshide" name="open_project" value="a">
                         <input class="plshide" name="project_name" value="a">
                     </form>
-                        <div class="plshide" id="saved">' . $_POST["canvas"] .'</div>
-                    </div>
+                    <div class="plshide" id="saved">' . @$_POST["canvas"] . '</div>
+                </div>
                 </main>';
         
-        
-        
+    }
+
+    function wczytajWarstwe(){     //linie od zera dla łatwości może raczej     
+        $f = fopen($layers_dir, "a+");
+        $i = 0;
+        while(!feof($f)){
+            echo '<div id="layer'. $i .'">' . fgets($f) . '</div>';
+            $i++ ;
+        }
+
+        fclose($f);
+        return;
+    }
+    
+    if(isset($_POST["canvas"])){    //wrzucanie do pliku zapisanego canvasa (vhyba)   
+
+        wczytajWarstwe();       
+
     }
 
     ?>
