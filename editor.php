@@ -82,7 +82,7 @@
         
     }
 
-    function wczytajWarstwe(){     //linie od zera dla łatwości może raczej     
+    function wczytajCanvas(){     //linie od zera dla łatwości może raczej     
         $f = fopen($layers_dir, "a+");
         $i = 0;
         while(!feof($f)){
@@ -96,7 +96,7 @@
     
     if(isset($_POST["canvas"])){    //wrzucanie do pliku zapisanego canvasa (vhyba)   
 
-        wczytajWarstwe();       
+        wczytajCanvas();       
 
     }
 
