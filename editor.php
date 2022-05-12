@@ -82,6 +82,14 @@
         
     }
 
+    function zapiszCanvas(){
+        $f = fopen($layers_dir, "a+");
+        fwrite($f, $_POST['canvas']);
+        fclose($f);
+        
+        return;
+    }
+
     function wczytajCanvas(){     //linie od zera dla łatwości może raczej     
         $f = fopen($layers_dir, "a+");
         $i = 0;
@@ -96,8 +104,8 @@
     
     if(isset($_POST["canvas"])){    //wrzucanie do pliku zapisanego canvasa (vhyba)   
 
-        wczytajCanvas();       
-
+        zapiszCanvas();
+        wczytajCanvas();
     }
 
     ?>
