@@ -75,7 +75,6 @@
                         <input id="save_project" type="submit" value="ZAPISZ">
                         <input class="plshide" name="open_project" value="'.$_POST["open_project"].'">
                     </form>
-                    <div class="plshide" id="saved">' . @$_POST["canvas"] . '</div>
                 </div>
                 </main>';
         
@@ -96,18 +95,19 @@
         $f = fopen($layers_dir, "a+");
         $i = 0;
         while(!feof($f)){
-            echo '<div class="plshide" id="layer'. $i .'">' . fgets($f) . '</div>';
+            echo '<div class="plshide" id="layer'. $i .'">' . fgets($f) . '</div>'; //stworzyć diva co obejmuje do jQuery
             $i++ ;
         }
 
         fclose($f);
         return;
     }
+
+    wczytajCanvas();
     
     if(isset($_POST["canvas"])){    //wrzucanie do pliku zapisanego canvasa (vhyba)   
 
         zapiszCanvas();
-        wczytajCanvas();
     }
 
     ?>

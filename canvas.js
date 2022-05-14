@@ -6,7 +6,7 @@ const s_p = s_canvas.getContext("2d")
 
 //wczytywanie canvasa
 let saved_img = new Image()
-saved_img.src = document.getElementById("saved").innerText  //wczytywanie src
+saved_img.src = document.getElementById("layer0").innerText  //wczytywanie src
 saved_img.onload = () => {
     s_p.drawImage(saved_img, 0, 0)
     console.log("Ae")
