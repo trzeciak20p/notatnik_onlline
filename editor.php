@@ -28,7 +28,7 @@
     }else{
 
         //tworzenie nowego projektu lub wybieranie istniejącego jak dir istnieje
-        $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["project_name"];    //folder projektu
+        $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["open_project"];    //folder projektu
         $layers_dir = $dir . "layers.txt";
         $load = true;
         if( isset($_POST["new_project"]) && !empty($_POST["project_name"]) ){
@@ -73,8 +73,7 @@
                     </div>
                     <form method="POST" action="editor.php">
                         <input id="save_project" type="submit" value="ZAPISZ">
-                        <input class="plshide" name="open_project" value="a">
-                        <input class="plshide" name="project_name" value="a">
+                        <input class="plshide" name="open_project" value="'.$_POST["open_project"].'">
                     </form>
                     <div class="plshide" id="saved">' . @$_POST["canvas"] . '</div>
                 </div>
