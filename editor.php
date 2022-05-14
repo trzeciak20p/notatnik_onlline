@@ -83,6 +83,7 @@
 
     function zapiszCanvas(){
         global $layers_dir;
+        unlink($layers_dir);
         $f = fopen($layers_dir, "a+");
         fwrite($f, $_POST['canvas']);
         fclose($f);
@@ -91,11 +92,11 @@
     }
 
     function wczytajCanvas(){     //linie od zera dla łatwości może raczej   
-        global $layers_dir;
+        global $layers_dir;     
         $f = fopen($layers_dir, "a+");
         $i = 0;
         while(!feof($f)){
-            echo '<div id="layer'. $i .'">' . fgets($f) . '</div>';
+            echo '<div class="plshide" id="layer'. $i .'">' . fgets($f) . '</div>';
             $i++ ;
         }
 
