@@ -35,7 +35,7 @@
             
             if(!is_dir($dir)){
                 mkdir($dir);
-                $layers = fopen($layers_dir, "a+");     //tworzenie pliku (nwm czy tak można)
+                $layers = fopen($layers_dir, "a+");     //tworzenie pliku (nwm czy tak można)[tak można a nawet trzeba]
                 fclose($layers);
                 
                 $load = false;      //godlike 2 lines save
@@ -82,6 +82,7 @@
     }
 
     function zapiszCanvas(){
+        global $layers_dir;
         $f = fopen($layers_dir, "a+");
         fwrite($f, $_POST['canvas']);
         fclose($f);
@@ -89,7 +90,8 @@
         return;
     }
 
-    function wczytajCanvas(){     //linie od zera dla łatwości może raczej     
+    function wczytajCanvas(){     //linie od zera dla łatwości może raczej   
+        global $layers_dir;
         $f = fopen($layers_dir, "a+");
         $i = 0;
         while(!feof($f)){
