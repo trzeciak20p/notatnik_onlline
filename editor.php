@@ -95,7 +95,7 @@
         $f = fopen($layers_dir, "a+");
         $i = 0;
         while(!feof($f)){
-            echo '<div class="ae" id="layer'. $i .'">' . fgets($f) . '</div>'; //stworzyć diva co obejmuje do jQuery
+            echo '<div class="plshide" id="layer'. $i .'">' . fgets($f) . '</div>'; //stworzyć diva co obejmuje do jQuery
             $i++ ;
         }
 
