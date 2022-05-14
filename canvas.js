@@ -80,7 +80,8 @@ function draw(){
     s_p.strokeStyle = p.color
     switch (current_tool) {     //kształt
         case 0:
-            s_p.fillRect( p.x - p.size/2 + 1, p.y - p.size/2 + 1, p.size , p.size)        
+            s_p.fillRect( p.x - p.size/2 + 1, p.y - p.size/2 + 1, p.size , p.size)  
+
             break;
 
         case 1:   
@@ -100,22 +101,22 @@ function draw(){
 }
 function stopDraw(){
     clearTimeout(draw_timeout)
-    console.log("stopped")
+    // console.log("stopped")
 }
 
 function drawPen(){
     m_p.clearRect(0, 0, 750, 400)       //czyszczenie poprzedniego kursora
     m_p.fillStyle = p.color     //zmiana koloru
-    if(p.color != "#fff" || p.color != "#ffffff"){      //obramówka kursora
-        m_p.strokeStyle = "#fff"
-    }else{
+    if(p.color == "#ffffff"){      //obramówka kursora
         m_p.strokeStyle = "#000"
-
+    }else{
+        m_p.strokeStyle = "#fff"
     }
 
     switch (current_tool) {     //kształt
         case 0:
-            m_p.fillRect( p.x - p.size/2 + 1, p.y - p.size/2 + 1, p.size , p.size)        
+            m_p.fillRect( p.x - p.size/2 + 1, p.y - p.size/2 + 1, p.size , p.size) 
+
             break;
 
         case 1:   
@@ -124,7 +125,6 @@ function drawPen(){
             m_p.stroke()
             m_p.closePath()
             m_p.fill()
-            
             break;
 
         default:
