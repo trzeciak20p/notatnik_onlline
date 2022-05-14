@@ -29,7 +29,7 @@
 
         //tworzenie nowego projektu lub wybieranie istniejącego jak dir istnieje
         $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["open_project"];    //folder projektu
-        $layers_dir = $dir . "layers.txt";
+        $layers_dir = $dir . "/layers.txt";
         $load = true;
         if( isset($_POST["new_project"]) && !empty($_POST["project_name"]) ){
             
@@ -95,20 +95,19 @@
         $f = fopen($layers_dir, "a+");
         $i = 0;
         while(!feof($f)){
-            echo '<div class="plshide" id="layer'. $i .'">' . fgets($f) . '</div>'; //stworzyć diva co obejmuje do jQuery
+            echo '<div class="ae" id="layer'. $i .'">' . fgets($f) . '</div>'; //stworzyć diva co obejmuje do jQuery
             $i++ ;
         }
 
         fclose($f);
         return;
     }
-
-    wczytajCanvas();
-    
+  
     if(isset($_POST["canvas"])){    //wrzucanie do pliku zapisanego canvasa (vhyba)   
 
         zapiszCanvas();
     }
+    wczytajCanvas();
 
     ?>
 
