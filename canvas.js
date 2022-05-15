@@ -104,6 +104,11 @@ function stopDraw(){
     // console.log("stopped")
 }
 
+function obramowkaKursora(){    //zmiana koloru obramówki na przeciwny
+    
+    return;
+}
+
 function drawPen(){
     m_p.clearRect(0, 0, 750, 400)       //czyszczenie poprzedniego kursora
     m_p.fillStyle = p.color     //zmiana koloru
