@@ -104,24 +104,30 @@ function stopDraw(){
     // console.log("stopped")
 }
 
-function obramowkaKursora(){    //zmiana koloru obramówki na przeciwny
-    
-    return;
+function hexNaDec(num){
+    return num.toString(16)
+}
+
+function odwrotnyKolor(kolor){    //zmiana koloru obramówki na przeciwny
+    return "#" + String( hexNaDec(255 - parseInt(kolor[1] + kolor[2])) ) + String( hexNaDec(255 - parseInt(kolor[3] + kolor[4])) )  + String( hexNaDec(255 - parseInt(kolor[5] + kolor[6])) );
 }
 
 function drawPen(){
     m_p.clearRect(0, 0, 750, 400)       //czyszczenie poprzedniego kursora
     m_p.fillStyle = p.color     //zmiana koloru
-    if(p.color == "#ffffff"){      //obramówka kursora
-        m_p.strokeStyle = "#000"
-    }else{
-        m_p.strokeStyle = "#fff"
-    }
+    m_p.strokeStyle = odwrotnyKolor(p.color)     //obramówka kursora
 
     switch (current_tool) {     //kształt
         case 0:
             m_p.fillRect( p.x - p.size/2 + 1, p.y - p.size/2 + 1, p.size , p.size) 
-
+            m_p.beginPath()
+            m_p.moveTo(p.x - p.size/2 + 1, p.y + p.size/2 + 1)
+            m_p.lineTo(p.x + p.size/2 + 1, p.y + p.size/2 + 1)
+            m_p.lineTo(p.x + p.size/2 + 1, p.y - p.size/2)
+            m_p.lineTo(p.x - p.size/2 + 1, p.y - p.size/2)
+            m_p.lineTo(p.x - p.size/2 + 1, p.y + p.size/2 + 1)
+            m_p.closePath()
+            m_p.stroke()
             break;
 
         case 1:   
@@ -154,4 +160,3 @@ function saveProject(){
     
 
 }
-

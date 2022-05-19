@@ -46,7 +46,6 @@
     
         }else if( isset($_POST["open_project"]) ){
             $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["open_project"];
-            $layers_dir = $dir . "/layers.txt";
             echo "<span>". $_POST["open_project"] ."</span> </nav>";   
         
             $nazwa_projektu = $_POST["open_project"];
@@ -83,12 +82,12 @@
     }
 
     function zapiszCanvas(){
+        global $dir;
         if(!is_dir($dir)){
             mkdir($dir);
         }
         global $layers_dir;
         unlink($layers_dir);
-        echo $layers_dir;
         $f = fopen($layers_dir, "a+");
         fwrite($f, $_POST['canvas']);
         fclose($f);
