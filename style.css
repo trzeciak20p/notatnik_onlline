@@ -164,8 +164,31 @@ form .info{
     font-size: 15px;
     color: #aaa;
 }
-/* PROJECTS */
-
+#projects .pls_center{
+    display: flex;
+    justify-content: start;
+    margin-left: 20px;
+}
+#projects #new_project_form input[type='submit']{
+    width: 275px;
+    height: 65px;
+    margin-left: 0px;
+}
+#projects #loaded_projects_form{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    overflow: scroll;
+    scroll-behavior: scroll;
+    padding: 0px;
+    margin-top: 0px;
+}
+#projects input[type='submit']{
+    width: 200px;
+    height: 170px;
+    border-radius: 25px;
+    margin-left: 20px;
+}
 
 .plshide {
   display: none;
