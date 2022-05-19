@@ -109,11 +109,28 @@ function hexNaDec(num){
 }
 
 function odwrotnyKolor(kolor){    //zmiana koloru obramówki na przeciwny
-    for(i = 1; i <= 6; i++){
-        if(parseInt(kolor[i]) == null){
-            kolor[i] = kolor[i].toString(10)
-        }
+    if(isNaN(parseInt(kolor[1]))){
+        kolor1 = parseInt(kolor[1], 16)
     }
+    if(isNaN(parseInt(kolor[2]))){
+        kolor1 = parseInt(kolor[2], 16)
+    }
+    if(isNaN(parseInt(kolor[3]))){
+        kolor1 = parseInt(kolor[3], 16)
+    }
+    if(isNaN(parseInt(kolor[4]))){
+        kolor1 = parseInt(kolor[4], 16)
+    }
+    if(isNaN(parseInt(kolor[4]))){
+        kolor1 = parseInt(kolor[4]], 16)
+    }
+    if(isNaN(parseInt(kolor[1]))){
+        kolor1 = parseInt(kolor[1], 16)
+    }
+    
+    
+
+
     return "#" + String( hexNaDec(255 - parseInt(kolor[1] + kolor[2])) ) + String( hexNaDec(255 - parseInt(kolor[3] + kolor[4])) )  + String( hexNaDec(255 - parseInt(kolor[5] + kolor[6])) );
 }
 
