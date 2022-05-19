@@ -36,21 +36,21 @@
             $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["project_name"]; 
             $layers_dir = $dir . "/layers.txt";
             if(!is_dir($dir)){
-                $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["project_name"];    //folder projektu   
                 mkdir($dir);
-                // $layers = fopen($layers_dir, "a+");     //tworzenie pliku (nwm czy tak można)[tak można a nawet trzeba]
-                // fclose($layers);                
+                $layers = fopen($layers_dir, "a+");     //tworzenie pliku (nwm czy tak można)[tak można a nawet trzeba]
+                fclose($layers);
+                
                 $load = false;      //godlike 2 lines save
             }  
             $nazwa_projektu = $_POST["project_name"];
     
         }else if( isset($_POST["open_project"]) ){
             $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["open_project"];
+            $layers_dir = $dir . "/layers.txt";
             echo "<span>". $_POST["open_project"] ."</span> </nav>";   
         
             $nazwa_projektu = $_POST["open_project"];
         }
-        $layers_dir = $dir . "/layers.txt";
         //struktura jak wszystko jest git
         
         
@@ -74,7 +74,7 @@
                     </div>
                     <form method="POST" action="editor.php">
                         <input id="save_project" type="submit" value="ZAPISZ">
-                        <input class="plshide" name="open_project" value="'.$nazwa_projektu.'">
+                        <input class="plshide" name="open_project" value="'. $nazwa_projektu.'">
                     </form>
                 </div>
                 </main>';
@@ -82,10 +82,6 @@
     }
 
     function zapiszCanvas(){
-        global $dir;
-        if(!is_dir($dir)){
-            mkdir($dir);
-        }
         global $layers_dir;
         unlink($layers_dir);
         $f = fopen($layers_dir, "a+");
@@ -115,9 +111,6 @@
 
     wczytajCanvas();
 
-    if($load){
-        wczytajCanvas();
-    }
     ?>
 
 
