@@ -12,12 +12,12 @@ if( !isset($_SESSION["login"]) ){
     
         <div class="pls_center">
             <div>
-                <form method="POST" action="editor.php">
+                <form method="POST" action="editor.php" id="new_project_form">
                     <input type="text" name="project_name" required="required">
                     <input type="submit" name="new_project" value="utwórz nowy projekt">
                 </form>
             </div>
-            <form method="POST" action="editor.php">
+            <form method="POST" action="editor.php" id="loaded_projects_form">
             
     ';
 
