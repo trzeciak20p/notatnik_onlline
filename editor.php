@@ -27,12 +27,14 @@
 
     }else{
 
-        //tworzenie nowego projektu lub wybieranie istniejącego jak dir istnieje
-        $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["open_project"];    //folder projektu
-        $layers_dir = $dir . "/layers.txt";
+        $nazwa_projektu;        //do wyświetlania w nav żeby działało
+        $layers_dir;
+
         $load = true;
-        if( isset($_POST["new_project"]) && !empty($_POST["project_name"]) ){
-            
+        if( isset($_POST["new_project"]) && !empty($_POST["project_name"]) ){   //tworzenie nowego projektu lub wybieranie istniejącego jak dir istnieje
+           
+            $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["project_name"]; 
+            $layers_dir = $dir . "/layers.txt";
             if(!is_dir($dir)){
                 mkdir($dir);
                 $layers = fopen($layers_dir, "a+");     //tworzenie pliku (nwm czy tak można)[tak można a nawet trzeba]
@@ -40,18 +42,17 @@
                 
                 $load = false;      //godlike 2 lines save
             }  
+            $nazwa_projektu = $_POST["project_name"];
     
         }else if( isset($_POST["open_project"]) ){
             $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["open_project"];
+            $layers_dir = $dir . "/layers.txt";
             echo "<span>". $_POST["open_project"] ."</span> </nav>";   
-
-
+        
+            $nazwa_projektu = $_POST["open_project"];
         }
         //struktura jak wszystko jest git
         
-        if($load){
-
-        }
         
         echo '  </nav><main>
                 <div>
@@ -73,7 +74,7 @@
                     </div>
                     <form method="POST" action="editor.php">
                         <input id="save_project" type="submit" value="ZAPISZ">
-                        <input class="plshide" name="open_project" value="'.$_POST["open_project"].'">
+                        <input class="plshide" name="open_project" value="'.$nazwa_projektu.'">
                     </form>
                 </div>
                 </main>';
@@ -107,14 +108,10 @@
 
         zapiszCanvas();
     }
+
     wczytajCanvas();
 
     ?>
-
-
-
-
-
 
 
 

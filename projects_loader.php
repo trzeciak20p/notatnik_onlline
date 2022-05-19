@@ -14,7 +14,7 @@ if( !isset($_SESSION["login"]) ){
             <div>
                 <form method="POST" action="editor.php">
                     <input type="text" name="project_name" required="required">
-                    <input type="submit" name="new_project">
+                    <input type="submit" name="new_project" value="utwórz nowy projekt">
                 </form>
             </div>
             <form method="POST" action="editor.php">
