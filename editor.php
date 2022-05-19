@@ -27,11 +27,14 @@
 
     }else{
 
-        //tworzenie nowego projektu lub wybieranie istniejącego jak dir istnieje
-        
+        $nazwa_projektu;        //do wyświetlania w nav żeby działało
+        $layers_dir;
+
         $load = true;
-        if( isset($_POST["new_project"]) && !empty($_POST["project_name"]) ){
-            
+        if( isset($_POST["new_project"]) && !empty($_POST["project_name"]) ){   //tworzenie nowego projektu lub wybieranie istniejącego jak dir istnieje
+           
+            $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["project_name"]; 
+            $layers_dir = $dir . "/layers.txt";
             if(!is_dir($dir)){
                 $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["project_name"];    //folder projektu   
                 mkdir($dir);
@@ -39,16 +42,17 @@
                 // fclose($layers);                
                 $load = false;      //godlike 2 lines save
             }  
+            $nazwa_projektu = $_POST["project_name"];
     
         }else if( isset($_POST["open_project"]) ){
             $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["open_project"];
+            $layers_dir = $dir . "/layers.txt";
             echo "<span>". $_POST["open_project"] ."</span> </nav>";   
-
-
+        
+            $nazwa_projektu = $_POST["open_project"];
         }
         $layers_dir = $dir . "/layers.txt";
         //struktura jak wszystko jest git
-        
         
         
         echo '  </nav><main>
@@ -71,7 +75,7 @@
                     </div>
                     <form method="POST" action="editor.php">
                         <input id="save_project" type="submit" value="ZAPISZ">
-                        <input class="plshide" name="open_project" value="'.$_POST["project_name"].'">
+                        <input class="plshide" name="open_project" value="'.$nazwa_projektu.'">
                     </form>
                 </div>
                 </main>';
@@ -110,15 +114,12 @@
         zapiszCanvas();
     }
 
+    wczytajCanvas();
+
     if($load){
         wczytajCanvas();
     }
     ?>
-
-
-
-
-
 
 
 
