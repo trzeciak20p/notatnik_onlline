@@ -25,22 +25,37 @@
     
     <main class="pls_center">
         
-        <form class="f_border" method="POST" action="login_validator.php">
+        <?php
 
-            <label>
-                <h2>Login</h3>
-                <input type="text" name="login" required="required">
-            </label>
-            <label>
-                <h2>Hasło</h3>
-                <input type="password" name="password" required="required">
-            </label>
-            
-            <input type="submit" name="submit" value="Zaloguj">
-            <br/><br/><br/>
-            <a href="register.php">Nie masz konta? Zarejestruj się.</a>
+            if(isset($_SESSION["login"])){      //gdy nie zalogowany
+                
+                echo '<form method="POST" action="logout.php">
+                    <input type="submit" name="logout" value="Wyloguj">
+                <form>';
+                
+                
+            }else{   //gdy zalogowany
 
-        <form>
+                echo '<form class="f_border" method="POST" action="login_validator.php">
+
+                    <label>
+                        <h2>Login</h3>
+                        <input type="text" name="login" required="required">
+                    </label>
+                    <label>
+                        <h2>Hasło</h3>
+                        <input type="password" name="password" required="required">
+                    </label>
+
+                    <input type="submit" name="submit" value="Zaloguj">
+                    <br/><br/><br/>
+                    <a href="register.php">Nie masz konta? Zarejestruj się.</a>
+
+                <form>';
+
+            }
+
+        ?>     
 
     </main>
 

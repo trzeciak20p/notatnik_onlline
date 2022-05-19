@@ -189,6 +189,9 @@ form .info{
     margin-left: 20px;
     min-width: 200px;
 }
+#projects a h3{
+    margin-left: 20px;
+}
 
 .plshide {
   display: none;

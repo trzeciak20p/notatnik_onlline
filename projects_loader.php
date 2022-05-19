@@ -2,7 +2,7 @@
 
 if( !isset($_SESSION["login"]) ){
 
-    echo "<a href='login.php'><h3>Zaloguj się aby zobaczyć swoje projekty!</h3></a>";
+    echo "<h2>Twoje projekty</h2><a href='login.php'><h3>Zaloguj się aby zobaczyć swoje projekty!</h3></a>";
 
 }else{
 
