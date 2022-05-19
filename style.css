@@ -178,8 +178,7 @@ form .info{
     display: flex;
     flex-direction: row;
     margin-left: 20px;
-    overflow: scroll;
-    scroll-behavior: scroll;
+    overflow: auto;
     padding: 0px;
     margin-top: 0px;
 }
@@ -188,6 +187,7 @@ form .info{
     height: 170px;
     border-radius: 25px;
     margin-left: 20px;
+    min-width: 200px;
 }
 
 .plshide {
