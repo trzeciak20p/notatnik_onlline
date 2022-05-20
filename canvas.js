@@ -165,7 +165,6 @@ function saveProject(){
     ae.setAttribute("class", "plshide")
     document.querySelector("form[action='editor.php']").appendChild(ae)
     
-
 }
 
 //Kopiowanie linku pliku do schowka
@@ -173,4 +172,12 @@ document.getElementById("copy_img_to_clipboard").addEventListener("click", copyI
 function copyImgToClipboard(){
     b = s_canvas.toDataURL("text/webp") 
     navigator.clipboard.writeText(b);
+}
+
+//Usuwanie plików
+document.getElementById("delete_project").addEventListener("click", deleteProject)
+function deleteProject(){
+
+
+
 }

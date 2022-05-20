@@ -76,6 +76,10 @@
                         <input id="copy_img_to_clipboard" type="button" value="kopiuj link obrazu">
                         <input class="plshide" name="open_project" value="'. $nazwa_projektu.'">
                     </form>
+                    <form method="POST" action="project_deleter.php">
+                        <input id="delete_project" type="button" name="delete_project" value="usuń projekt">
+                        <input class="plshide" name="delete_name" value="'. $nazwa_projektu.'">
+                    </form>
                 </div>
                 </main>';
         
