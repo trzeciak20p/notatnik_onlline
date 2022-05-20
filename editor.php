@@ -29,7 +29,6 @@
 
         $nazwa_projektu;        //do wyświetlania w nav żeby działało
         $layers_dir;
-
         $load = true;
         if( isset($_POST["new_project"]) && !empty($_POST["project_name"]) ){   //tworzenie nowego projektu lub wybieranie istniejącego jak dir istnieje
            
@@ -43,17 +42,17 @@
                 $load = false;      //godlike 2 lines save
             }  
             $nazwa_projektu = $_POST["project_name"];
+            echo "<span>". $nazwa_projektu ."</span>"; 
     
         }else if( isset($_POST["open_project"]) ){
             $dir = "data/" . $_SESSION["login"] . "/" .  $_POST["open_project"];
             $layers_dir = $dir . "/layers.txt";
-            echo "<span>". $_POST["open_project"] ."</span> </nav>";   
+            echo "<span>". $_POST["open_project"] ."</span>";   
         
             $nazwa_projektu = $_POST["open_project"];
         }
+
         //struktura jak wszystko jest git
-        
-        
         echo '  </nav><main>
                 <div>
                     <canvas id="show_canvas" width="750px" height="400px"></canvas>
@@ -74,6 +73,7 @@
                     </div>
                     <form method="POST" action="editor.php">
                         <input id="save_project" type="submit" value="ZAPISZ">
+                        <input id="copy_img_to_clipboard" type="button" value="kopiuj link obrazu">
                         <input class="plshide" name="open_project" value="'. $nazwa_projektu.'">
                     </form>
                 </div>

@@ -135,7 +135,7 @@ form input[type="text"], form input[type="password"]{
     border-radius: 15px;
     height: 30px;
 }
-form input[type="submit"]{
+form input[type="submit"], form input[type="button"]{
     cursor: pointer;
     border: solid 4px #ffbd45;
     background-color: #000;
@@ -146,7 +146,11 @@ form input[type="submit"]{
     height: 35px;
     margin-top: 20px;
     display: block;
+    transition: border 0.3s;
 }
+form input[type="submit"]:hover{
+    border: solid 4px #fff;
+}   
 form .captcha{
     user-select: none;
     font-size: 20px;

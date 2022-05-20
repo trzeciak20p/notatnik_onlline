@@ -167,3 +167,10 @@ function saveProject(){
     
 
 }
+
+//Kopiowanie linku pliku do schowka
+document.getElementById("copy_img_to_clipboard").addEventListener("click", copyImgToClipboard)
+function copyImgToClipboard(){
+    b = s_canvas.toDataURL("text/webp") 
+    navigator.clipboard.writeText(b);
+}
