@@ -112,7 +112,7 @@ function odwrotnyKolor(kolor2){    //zmiana koloru obramówki na przeciwny
     let kolor = new Array(6)
         for(i = 1; i <= 6; i++){
             if(isNaN(parseInt(kolor[i]))){
-                kolor[i] = String(kolor2[i].toString(10))
+                kolor[i] = parseInt(kolor2[i],16)
             }
         }
 
