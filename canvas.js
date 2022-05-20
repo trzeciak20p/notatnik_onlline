@@ -175,9 +175,19 @@ function copyImgToClipboard(){
 }
 
 //Usuwanie plików
-document.getElementById("delete_project").addEventListener("click", deleteProject)
+document.getElementById("dont_delete").addEventListener("click", ()=>{
+    document.getElementById("popdown").style.display = "none"
+
+})
+document.getElementById("delete").addEventListener("click", ()=>{      //popup
+    document.getElementById("popdown").style.display = "flex"
+})
+
+document.getElementById("delete").addEventListener("click", deleteProject)
+
 function deleteProject(){
 
 
 
 }
+

@@ -25,6 +25,7 @@ nav{
     width: 100%;
     height: 80px;
     border-botTOM: var(--nav_primary) solid 5px;    
+    z-index: 4;
 }
 nav ul{
     display: flex;
@@ -138,7 +139,7 @@ form input[type="text"], form input[type="password"]{
 form input[type="text"]:focus, form input[type="password"]:focus, main #search_field #search:focus{
     border: solid 3px #fff;
 }
-form input[type="submit"], form input[type="button"]{
+input[type="submit"], input[type="button"]{
     cursor: pointer;
     border: solid 4px #ffbd45;
     background-color: #000;
@@ -151,7 +152,7 @@ form input[type="submit"], form input[type="button"]{
     display: block;
     transition: border 0.3s;
 }
-form input[type="submit"]:hover, form input[type="button"]:hover{
+input[type="submit"]:hover,input[type="button"]:hover{
     border: solid 4px #fff;
 }   
 form .captcha{
@@ -203,3 +204,59 @@ form .info{
 .plshide {
   display: none;
 }
+
+
+/* pop-up */
+#popdown{
+	width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+	padding: 10px;
+	border-radius: 20px;
+	position: fixed;
+	left: auto;
+	right: auto;
+	top: 200px;
+	text-align: center;
+	background-color: gray;
+	color: wheat;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+    z-index: 5;
+}
+#popdown span{
+	font-size: 18px;
+}
+#popdown form{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+#popdown #dont_delete{
+    height: 60px;
+    width: 200px;
+    background-color: green;
+}
+#popdown #delete_project{
+    margin-left: 50px;
+    height: 60px;
+    width: 200px;
+    background-color: red;
+}
+/* #popdown .d_button{
+	width: 100px;
+	height: 30px;
+	margin-top: 10px;
+	line-height: 30px;
+	font-size: 20px;
+	text-transform: uppercase;
+	border-radius: 10px;
+	background-color: #525252;
+	color: wheat;
+	cursor: pointer;
+}
+#popdown .d_button:hover{	
+	background-color: wheat;
+	color: #525252;
+} */

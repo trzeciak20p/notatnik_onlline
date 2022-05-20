@@ -53,7 +53,21 @@
         }
 
         //struktura jak wszystko jest git
-        echo '  </nav><main>
+        echo '  </nav>
+        
+                <div id="popdown">
+                    <h2>Czy jesteś pewien?</h2>
+                    <span>Usunięcie pliku będzie trwałe i nie będzie go można przywrócić</span>
+                    <div class="pls_center">                        
+                        <form method="POST" action="project_deleter.php">
+                            <input id="dont_delete" type="button" value="zachowaj">
+                            <input id="delete_project" type="submit" name="delete_project" value="usuń projekt">
+                            <input class="plshide" name="delete_name" value="'. $nazwa_projektu.'">
+                        </form>
+                    </div>
+                </div> 
+
+                <main>
                 <div>
                     <canvas id="show_canvas" width="750px" height="400px"></canvas>
                     <canvas id="pen_canvas" width="750px" height="400px"></canvas>
@@ -76,10 +90,7 @@
                         <input id="copy_img_to_clipboard" type="button" value="kopiuj link obrazu">
                         <input class="plshide" name="open_project" value="'. $nazwa_projektu.'">
                     </form>
-                    <form method="POST" action="project_deleter.php">
-                        <input id="delete_project" type="button" name="delete_project" value="usuń projekt">
-                        <input class="plshide" name="delete_name" value="'. $nazwa_projektu.'">
-                    </form>
+                        <input id="delete" type="button" value="usuń">
                 </div>
                 </main>';
         
