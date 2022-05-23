@@ -1,7 +1,7 @@
 # Paint OnLine
     Strona służy do tworzenia i edycji własnych rusunków zapisywanych w chmurze.
-    W przyszłości można też będzie udostępniać własne projekty innym użytkownikom.
-    Obrazy można łatwo udostępniać linkiem. 
+    W przyszłości dodane zostanie więcej narzędzi w edytorze, a projekty można będzie dzielić z innymi urzytkownikami.
+    Obrazy, (ale nie dostęp do projektu) można łatwo udostępniać linkiem.
 
 ## ZAŁOŻENIA
     - Logowanie i rejestracja
