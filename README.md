@@ -1,6 +1,7 @@
 # Paint OnLine
-
-## Tu se możesz rysunki tworzyć, przeglądać i edytować
+    Strona służy do tworzenia i edycji własnych rusunków zapisywanych w chmurze.
+    W przyszłości można też będzie udostępniać własne projekty innym użytkownikom.
+    Obrazy można łatwo udostępniać linkiem. 
 
 ## ZAŁOŻENIA
     - Logowanie i rejestracja
@@ -34,4 +35,5 @@
     Import plików z zewnątrz: funkcja co patrzy czy guzik czy schowek (wtedy oidpowiednio pobiera i przekleja na canvasa)
     Zmienna na określanie która warstwa jest aktywna
     
-#IntelliJ
+login: login123
+haslo: haslo123
