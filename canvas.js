@@ -8,7 +8,7 @@ const s_p = s_canvas.getContext("2d")
 let saved_img = new Image()
 saved_img.src = document.getElementById("layer0").innerText  //wczytywanie src
 saved_img.onload = () => {
-    s_p.drawImage(saved_img, 0, 0)
+    s_p.drawImage(saved_img, 0, 0, )
     console.log("Ae")
 }
 
@@ -123,7 +123,7 @@ function drawPen(){
     m_p.clearRect(0, 0, 750, 400)       //czyszczenie poprzedniego kursora
     m_p.fillStyle = p.color     //zmiana koloru
     m_p.strokeStyle = odwrotnyKolor(p.color)     //obramówka kursora
-    console.log(p.color, odwrotnyKolor(p.color))
+    // console.log(p.color, odwrotnyKolor(p.color))
     switch (current_tool) {     //kształt
         case 0:
             m_p.fillRect( p.x - p.size/2 + 1, p.y - p.size/2 + 1, p.size , p.size) 
@@ -170,7 +170,7 @@ function saveProject(){
 //Kopiowanie linku pliku do schowka
 document.getElementById("copy_img_to_clipboard").addEventListener("click", copyImgToClipboard)
 function copyImgToClipboard(){
-    b = s_canvas.toDataURL("text/webp") 
+    b = s_canvas.toDataURL("image/webp") 
     navigator.clipboard.writeText(b);
 }
 
